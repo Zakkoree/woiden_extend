@@ -1,0 +1,8 @@
+requests>=2.27.1
+2captcha-python>=1.1.2
+baidu-aip
+ffmpy3
+chardet
+bs4
+playwright>=1.27.1
+telepot
