@@ -16,14 +16,16 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 
 
 ## 参数
-> ```USERNAME=Woiden或Hax的用户名
+> ```
+> USERNAME=Woiden或Hax的用户名
 > PASSWORD=Woiden或Hax的密码
 > TWOCAPTCHA_TOKEN=2Captcha的Token
 > APP_ID=百度语音API的APP_ID
 > API_KEY=百度语音API的API_KEY
 > SECRET_KEY=百度语音API的SECRET_KEY
 > TELE_ID=telegram用户ID
-> TELE_TOKEN=telegrambot_token机器人Token```
+> TELE_TOKEN=telegrambot_token机器人Token
+> ```
 
 ## 支持方式
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
