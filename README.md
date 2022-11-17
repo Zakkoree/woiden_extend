@@ -8,7 +8,7 @@
 `activity` 徽章显示自动任务最后成功执行时间，由于 `Github Action` 是UTC时区会有时差,有一天误差也可认为项目稳定运行
 
 > **Warning** 
-> 1. `Github Action` 上的 `Google reCaptcha` 验证基本触发不了， `Github Action` 服务器99%的IP都被 `Google` ban了，因为有的IP被别人使用过（干了啥就不知道了嘿嘿！），所以识别成了机器人，只能使用 `2Captcha` 或 `YesCaptcha` 的API破解验证码，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
+> 1. `Github Action` 上的 `Google reCaptcha` 验证基本触发不了， `Github Action` 服务器99%的IP都被 `Google` ban了，因为有的IP被人滥用过，所以识别成了机器人，只能使用 `2Captcha` 或 `YesCaptcha` 的API破解验证码，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 > 3. `Google reCaptcha v2` 项目是先执行语音验证，语音验证失败再执行图片验证，语音验证频繁调用会被ben(没几次就会被ben，不用担心应该就ben一两个小时左右)<br/>
 > 4. `Google reCaptcha v3` 评分验证还没弄明白这个网站入口在哪块，代码有写v3验证方法，现在是忽略v3验证，成功率基本100%就没管v3，有懂的可以研究下
 
