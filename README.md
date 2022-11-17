@@ -3,20 +3,18 @@
 
 **Woiden和Hax自动续订**
 
-`github action`默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯</br>
+`Github Action`默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯</br>
 每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
-
-[filename](renewTime ':include :type=txt')
 
 <kbd>注意:</kbd>
 
 > Hax续订没有调试，需要修改下配置，两个没什么差别，只需要修改URL
 
-> `google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证挺稳定，项目目前是先执行语音验证，语音验证失败再执行图片验证<br/>
-> `google reCaptcha v3` 评分验证目前没弄明白这个网站入口在哪块，代码有写v3验证方法，目前是忽略v3验证，成功率挺正常就没管v3，正常情况代码自动重试5次内就可以成功，有懂的同学可以研究下
+> `Google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证挺稳定，项目目前是先执行语音验证，语音验证失败再执行图片验证<br/>
+> `Google reCaptcha v3` 评分验证目前没弄明白这个网站入口在哪块，代码有写v3验证方法，目前是忽略v3验证，成功率挺正常就没管v3，正常情况代码自动重试5次内就可以成功，有懂的同学可以研究下
 
 已知问题：
-- github action语音验证触发不了，在本地测试可以
+- Github Action语音验证触发不了，在本地测试可以
 
 ## 参数
 > `USERNAME: Woiden或Hax的用户名`</br>
@@ -32,7 +30,7 @@
 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
-- github action
+- Github Action
 
 > 可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 
@@ -69,13 +67,13 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
 </details>
 
-- python script
+- Python Script
 
 > `python3 main.py`
-- docker
+- Docker
 
 > `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
-- 自己服务器 + crontab
+- 自己服务器 + Crontab
 
 > 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面 </br>
 > `python3 main.py` or `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
