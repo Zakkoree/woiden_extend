@@ -1,7 +1,7 @@
 
-# ~~woiden_extend~~ (删库跑路)
+# ~~woiden_extend~~ (删库跑路) <img align="right" src="https://img.shields.io/badge/2022.01.01-activity-success" />
 
-**Woiden和Hax自动续订** <img align="right" src="https://img.shields.io/badge/2022.01.01-activity-success" />
+**Woiden和Hax自动续订** 
 
 `Github Action`默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯</br>
 每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
