@@ -33,7 +33,7 @@ jobs:
           else
             echo "check=fail" >> $GITHUB_OUTPUT
           fi
-  build:
+  renew:
     runs-on: ubuntu-latest
     needs: check
     if: needs.check.outputs.check == 'success'
