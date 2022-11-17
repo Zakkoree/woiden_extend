@@ -27,13 +27,13 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 > `TELE_TOKEN: telegrambot_token机器人Token`
 
 ## 使用方式
-初次使用需要修改renewTime [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
+初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
 - github action
 
 > 可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
-> 将参数添加到Secret，执行 `/.github/workflows/renew.yml`</br>
+> 将参数添加到Secret，执行 `/.github/workflows/renew.yml`[/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml)</br>
 > 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，你可以通过修改 [renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率</br>
 > 
 > 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
