@@ -16,14 +16,14 @@ github action每天执行3次任务，正确情况下只需一次就可以成功
 
 
 ## 参数
-> '''
+```
 > USERNAME=
 > PASSWORD=
 > TWOCAPTCHA_TOKEN=
 > APP_ID=
 > API_KEY=
 > SECRET_KEY=
-> '''
+```
 
 ## 支持方式
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
