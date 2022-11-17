@@ -60,7 +60,7 @@ jobs:
           python3 main.py
           a=$(cat renewTime)
           b=${a//-/.}
-          sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" renewTime
+          sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
           git commit -a -m "download file"
           git push
   
