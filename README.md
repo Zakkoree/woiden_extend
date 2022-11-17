@@ -10,6 +10,13 @@
 github action默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯，每天成功续订后面任务就会暂停可以不产生多余的解码平台扣费
 
 …… <mark>注意</mark> …… 
+
+<span style="color:#4185c4;">/usr/local/nginx/sbin/nginx</span>
+
+<kbd>Backspace</kbd>
+
+你好[^脚注][^脚注]: 这是一个脚注
+
 > Hax续订没有调试，需要修改下配置，两个没什么差别，只需要修改URL
 
 > `google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证挺稳定，项目目前是先执行语音验证，语音验证失败再执行图片验证<br/>
