@@ -1,7 +1,7 @@
 
 # ~~woiden_extend~~
 
-## ==删库跑路*******==
+## == 删库跑路 ==
 
 ## 简介
 
@@ -31,7 +31,7 @@ python script和docker运行需要稍微修改(不能提醒最后续签日期 �
 将docker镜像pull下来，把命令添加到crontab里面  
 `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]`
 
-
+## 特性
 
 
 
@@ -39,4 +39,4 @@ python script和docker运行需要稍微修改(不能提醒最后续签日期 �
 
 <h1></h1>
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的 已经弃用
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的，已经弃用
