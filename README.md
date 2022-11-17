@@ -47,12 +47,12 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 > `python3 main.py` OR `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
 
 ## 特性
-- `BAIDU语音识别API` 用于音频验证 (新用户免费一年30000次)
-- `TWOCAPTCHA_TOKEN` 用于图片验证 (收费，一次6分钱)
+- `BAIDU语音识别 API` 用于音频验证 (新用户免费一年30000次)
+- `2Captcha API` 用于图片验证 (收费，一次6分钱)
 
 ## 计划添加
-- `讯飞语音识别API` 用于音频验证 (每个月免费使用500次)
-- `yescaptcha` 用于图片验证 (新用户免费1500次 价格便宜)
+- `讯飞语音识别 API` 用于音频验证 (每个月免费使用500次)
+- `yescaptcha API` 用于图片验证 (新用户免费1500次 价格便宜)
 
 
 
