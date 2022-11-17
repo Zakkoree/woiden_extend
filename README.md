@@ -9,13 +9,7 @@
 
 github action默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯，每天成功续订后面任务就会暂停可以不产生多余的解码平台扣费
 
-......注意......
-
-<span style="color:#4185c4;">/usr/local/nginx/sbin/nginx</span>
-
-<kbd>Backspace</kbd>
-
-你好[^支持方式][^支持方式]: 这是一个脚注
+<kbd>注意</kbd>
 
 > Hax续订没有调试，需要修改下配置，两个没什么差别，只需要修改URL
 
