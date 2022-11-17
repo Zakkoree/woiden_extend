@@ -5,7 +5,7 @@
 
 ## 简介
 
-**woiden和Hax自动续订**
+**Woiden和Hax自动续订**
 
 github action每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯，每天成功续订后面任务就会跳过，解码平台不会产生多余的扣费
 
@@ -16,21 +16,19 @@ github action每天执行3次任务，正确情况下只需一次就可以成功
 
 
 ## 参数
-> ```
-> USERNAME=
-> PASSWORD=
-> TWOCAPTCHA_TOKEN=
-> APP_ID=
-> API_KEY=
-> SECRET_KEY=
-> ```
+> ```USERNAME=Woiden或Hax的用户名
+> PASSWORD=Woiden或Hax的密码
+> TWOCAPTCHA_TOKEN=2Captcha的Token
+> APP_ID=百度语音API的APP_ID
+> API_KEY=百度语音API的API_KEY
+> SECRET_KEY=百度语音API的SECRET_KEY ```
 
 ## 支持方式
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
 - github action
 
-> `/.github/workflows/renew.yml` <br/>
+> 将参数添加到Secret，执行 `/.github/workflows/renew.yml` <br/>
 > 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，时区为UTC时间 <br/>
 > 可以调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用 <br/>
 
@@ -57,5 +55,4 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 
 <h1></h1>
-
 HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的，已经弃用
