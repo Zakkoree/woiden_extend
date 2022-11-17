@@ -3,8 +3,8 @@
 
 **Woiden和Hax自动续订** 
 
-`Github Action` 默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率基本💯</br>
-每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
+Woiden Hax自动续订正常情况下只需一次就可以成功续订，成功率基本💯</br>
+`Github Action` 默认每天执行3次任务，每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
 
 > **Warning**  <kbd>**注意**</kbd>
 > 1. `Github Action` 上的 `Google reCaptcha` 基本验证触发不了， `Github Action` 服务器99%的IP都被 `Google` ban了，因为有的IP被别人使用过（干了啥就不知道了嘿嘿！），所以识别成了机器人，只能使用 `2Captcha` 或 `yescaptcha` 的API破解验证码，或者托管自己的服务器，IP大概率不会被ban [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
