@@ -1,0 +1,42 @@
+name: desert-renew
+
+# Controls when the action will run. 
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+           python-version: 3.7
+      - name: 'Install requirements'
+        run: pip install -r ./requirements.txt
+      - name: 'Install'
+        run: |
+          apt update && apt install unzip wget ffmpeg -y  \
+          && wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
+          && apt install -y /tmp/chrome.deb \
+          && rm /tmp/chrome.deb \
+          && apt clean && rm -rf /var/lib/apt/lists/*
+          wget  --no-verbose  https://chromedriver.storage.googleapis.com/101.0.4951.41/chromedriver_linux64.zip \
+          && unzip chromedriver_linux64.zip\
+          && rm chromedriver_linux64.zip
+          
+      - name: 'Working'
+        run: |
+          cd HaxExtend
+          python ./main.py "${{ secrets.API_KEY }}" "${{ secrets.APP_ID }}" "${{ secrets.SECRET_KEY }}" "${{ secrets.USERNAME }}" "${{ secrets.PASSWORD }}" "${{ secrets.TWOCAPTCHA_TOKEN }}" "woiden.id"
