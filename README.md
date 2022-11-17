@@ -25,8 +25,8 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 - github action
 
 > `/.github/workflows/renew.yml` <br/>
-> 默认手动+cron，每天早上 `0/8/16` 点执行 `0 0,8,16 * * *` 时区为UTC时间 <br/>
-> 可以调整为每三天早上 `0/8/16` 点执行 `0 0,8,16 */3 * *` 降低解码平台费用 <br/>
+> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，时区为UTC时间 <br/>
+> 可以调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用 <br/>
 > 或者托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners) <br/>
 - python script
 
