@@ -25,18 +25,18 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 - github action
 
 ```
-/.github/workflows/renew.yml
-`run action`
+> /.github/workflows/renew.yml
+> run action
 ```
 
 或者托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - python script
 
-`python3 main.py`
+> `python3 main.py`
 - docker
 
 ```
-docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]
+> docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]
 ```
 - 自己服务器 + crontab
 
