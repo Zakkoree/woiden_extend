@@ -24,7 +24,7 @@ jobs:
         with:
            python-version: 3.7
       - name: 'Install requirements'
-        run: pip install -r ./requirements.txt
+        run: pip install -r ./HaxExtend/requirements.txt
       - name: 'Install'
         run: |
           apt update && apt install unzip wget ffmpeg -y  \
