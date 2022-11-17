@@ -29,15 +29,12 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 - github action
 
+> 可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 > 将参数添加到Secret，执行 `/.github/workflows/renew.yml` </br>
 > 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行</br>
-
 > 你可以通过修改 [renew.yml](https://github.com/justjavac/auto-green/blob/master/.github/workflows/renew.yml#L8)来调整频率</br>
-
 > 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
-
 > 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
-
 > `时区为UTC`</br>
 > ```plain
 > ┌───────────── 分钟 (0 - 59)
@@ -60,8 +57,7 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 > 
 > **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
 
-
-> 或者托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
+> 或者
 - python script
 
 > `python3 main.py`
