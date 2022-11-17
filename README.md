@@ -1,8 +1,6 @@
 
 # ~~woiden_extend~~ (删库跑路)
 
-## 简介
-
 **Woiden和Hax自动续订**
 
 github action默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯</br>
