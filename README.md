@@ -24,14 +24,21 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`
 
-## 支持方式
+## 使用方式
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
 - github action
 
 > 将参数添加到Secret，执行 `/.github/workflows/renew.yml` </br>
-> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，时区为UTC时间 </br>
-> 可以调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用 </br>
+> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行</br>
+
+> 你可以通过修改 [renew.yml](https://github.com/justjavac/auto-green/blob/master/.github/workflows/renew.yml#L8)来调整频率</br>
+
+> 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
+
+> 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
+
+> `时区为UTC`</br>
 > ```plain
 > ┌───────────── 分钟 (0 - 59)
 > │ ┌───────────── 小时 (0 - 23)
@@ -42,16 +49,17 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 > │ │ │ │ │
 > │ │ │ │ │
 > * * * * *
-> 
-> 每个时间字段的含义：
-> |符号   | 描述        | 举例                                        |
-> | ----- | -----------| -------------------------------------------|
-> | `*`   | 任意值      | `* * * * *` 每天每小时每分钟                  |
-> | `,`   | 值分隔符    | `1,3,4,7 * * * *` 每小时的 1 3 4 7 分钟       |
-> | `-`   | 范围       | `1-6 * * * *` 每小时的 1-6 分钟               |
-> | `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |
-> **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
 > ```
+> 每个时间字段的含义：</br>
+> |符号   | 描述        | 举例                                        |</br>
+> | ----- | -----------| -------------------------------------------|</br>
+> | `*`   | 任意值      | `* * * * *` 每天每小时每分钟                  |</br>
+> | `,`   | 值分隔符    | `1,3,4,7 * * * *` 每小时的 1 3 4 7 分钟       |</br>
+> | `-`   | 范围       | `1-6 * * * *` 每小时的 1-6 分钟               |</br>
+> | `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |</br>
+> 
+> **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
+
 
 > 或者托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - python script
@@ -65,12 +73,17 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 > 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面 </br>
 > `python3 main.py` or `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
 
+
+
+
+
 ## 集成列表
 - [x] `baidu语音识别 API` 用于音频验证 (新用户免费一年30000次)
 - [ ] `讯飞语音识别 API` 用于音频验证 (每个月免费使用500次)
 - [x] `2Captcha API` 用于图片验证 (收费，一次6分钱)
 - [ ] `yescaptcha API` 用于图片验证 (新用户免费1500次 价格便宜)
 
+## 
 
 <h1></h1>
 HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的，已经弃用
