@@ -31,12 +31,12 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 > 可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 > 将参数添加到Secret，执行 `/.github/workflows/renew.yml` </br>
-> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行</br>
-> 你可以通过修改 [renew.yml](https://github.com/justjavac/auto-green/blob/master/.github/workflows/renew.yml#L8)来调整频率</br>
+> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，你可以通过修改 [renew.yml  文件的第 6 行](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6)来调整频率</br>
+> 
 > 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
 
 <details>
- <summary>定时语法</summary>
+ <summary>计划任务语法</summary>
 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
 <kbd>时区为UTC</kbd></br>
 
