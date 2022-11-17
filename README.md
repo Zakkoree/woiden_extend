@@ -9,7 +9,7 @@
 
 github action默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯，每天成功续订后面任务就会暂停可以不产生多余的解码平台扣费
 
-…… <mark>注意<mark> …… 
+…… <mark>注意</mark> …… 
 > Hax续订没有调试，需要修改下配置，两个没什么差别，只需要修改URL
 
 > `google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证挺稳定，项目目前是先执行语音验证，语音验证失败再执行图片验证<br/>
@@ -17,13 +17,13 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 
 
 ## 参数
-> `USERNAME: Woiden或Hax的用户名`<br>
-> `PASSWORD: Woiden或Hax的密码`<br>
-> `TWOCAPTCHA_TOKEN: 2Captcha的Token`<br>
-> `APP_ID: 百度语音API的APP_ID`<br>
-> `API_KEY: 百度语音API的API_KEY`<br>
-> `SECRET_KEY: 百度语音API的SECRET_KEY`<br>
-> `TELE_ID: telegram用户ID`<br>
+> `USERNAME: Woiden或Hax的用户名`</br>
+> `PASSWORD: Woiden或Hax的密码`</br>
+> `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
+> `APP_ID: 百度语音API的APP_ID`</br>
+> `API_KEY: 百度语音API的API_KEY`</br>
+> `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
+> `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`
 
 ## 支持方式
@@ -31,9 +31,9 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 - github action
 
-> 将参数添加到Secret，执行 `/.github/workflows/renew.yml` <br/>
-> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，时区为UTC时间 <br/>
-> 可以调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用 <br/>
+> 将参数添加到Secret，执行 `/.github/workflows/renew.yml` </br>
+> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，时区为UTC时间 </br>
+> 可以调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用 </br>
 
 > 或者托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - python script
@@ -44,7 +44,7 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 > `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
 - 自己服务器 + crontab
 
-> 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面 <br/>
+> 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面 </br>
 > `python3 main.py` or `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
 
 ## 集成列表
