@@ -6,7 +6,7 @@
 `github action`默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率接近💯</br>
 每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
 
-[filename](https://raw.githubusercontent.com/Zakkoree/woiden_extend/main/renewTime ':include :type=text')
+[filename](https://raw.githubusercontent.com/Zakkoree/woiden_extend/main/renewTime ':include :type=html')
 
 <kbd>注意:</kbd>
 
