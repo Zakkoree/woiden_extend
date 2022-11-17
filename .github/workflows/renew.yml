@@ -26,7 +26,6 @@ jobs:
       - id: check
         name: check
         run: |
-          cd my
           renewTime=$(cat renewTime)
           interval=$(( ($(date -d "now" +%s) - $(date -d "$renewTime" +%s))/(24*60*60) )) 2>&1 
           if [ "$?" = 0 ] && [ $interval -gt 0 ] && [ $interval -lt 8 ]; then
