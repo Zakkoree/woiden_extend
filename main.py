@@ -169,7 +169,7 @@ def run(page):
         woiden自动续订脚本
         Woiden renew fail
         Last updated time {0}
-        https://github.com/Zakkoree/woiden_extend
+        有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
         '''.format(lastTime)
         send(teleinfomsg)
 
