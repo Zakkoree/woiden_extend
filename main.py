@@ -149,8 +149,8 @@ def run(page):
         logger.info("renew succeed")
         # barkPush('[INFO] renew succeed')
         teleinfomsg = '''
-        woiden自动续订脚本
-        Woiden renew succeed
+        Woiden自动续订脚本
+        Woiden Renew Succeed
         {0}
         https://github.com/Zakkoree/woiden_extend
         '''.format(message)
@@ -166,9 +166,9 @@ def run(page):
         # barkPush('[ERROR] renew fail')
         file.read()
         teleinfomsg = '''
-        woiden自动续订脚本
+        Woiden自动续订脚本
         Woiden renew fail
-        Last updated time {0}
+        Last Renew Time {0}
         有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
         '''.format(lastTime)
         send(teleinfomsg)
