@@ -73,7 +73,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 > 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面 </br>
 > `python3 main.py` or `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -it --rm  [镜像]`
 
-> **Warning** 注意别使用我的镜像,有可能是旧的或者测试用的
+> **Warning** <kbd>**注意**</kbd> 别使用我的镜像,有可能是旧的或者测试用的
 
 
 
