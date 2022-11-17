@@ -27,6 +27,7 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 > `TELE_TOKEN: telegrambot_token机器人Token`
 
 ## 使用方式
+初次使用需要修改renewTime [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
 - github action
