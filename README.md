@@ -82,13 +82,12 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 
 
-## 集成列表
+## 集成
 - [x] `baidu语音识别 API` 用于音频验证 (新用户免费一年30000次)
 - [ ] `讯飞语音识别 API` 用于音频验证 (每个月免费使用500次)
 - [x] `2Captcha API` 用于图片验证 (收费，一次6分钱)
 - [ ] `yescaptcha API` 用于图片验证 (新用户免费1500次 价格便宜)
 
-## 
+#
 
-<h1></h1>
 HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的，已经弃用
