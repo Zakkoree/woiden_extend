@@ -24,7 +24,7 @@
 > `TELE_TOKEN: telegrambot_token机器人Token`
 
 ## 使用方式
-初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
+初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了</br>
 python script和docker运行需要稍微修改 (执行失败不能提醒最后续签日期)
 
 - Github Action
