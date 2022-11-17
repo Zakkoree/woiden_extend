@@ -1,7 +1,7 @@
 
 # ~~woiden_extend~~
 
-### 删库跑路*******
+## ==删库跑路*******==
 
 ## 简介
 
@@ -12,7 +12,11 @@ Hax需要修改下参数
 python script和docker运行需要稍微修改(不能提醒最后续签日期 目前集成在github action)
 
 - github action
+
+`run action`
 - python script
+
+`python3 main.py`
 - docker
 
 `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [自己的镜像]` 
