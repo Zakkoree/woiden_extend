@@ -6,10 +6,8 @@
 `Github Action`默认每天执行3次任务，正确情况下只需一次就可以成功续订，成功率基本💯</br>
 每天成功续订后面任务就会暂停，可以不产生多余的解码平台扣费
 
-<kbd>**注意**</kbd>
-
-> **Warning** 
-> 1. `Github Action` 上的 `Google reCaptcha` 基本验证触发不了， `Github Action` 服务器99%的IP被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会随机切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，还是可以使用 `2Captcha` 或 `yescaptcha` 的API破解验证码，可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
+> **Warning**  <kbd>**注意**</kbd>
+> 1. `Github Action` 上的 `Google reCaptcha` 基本验证触发不了， `Github Action` 服务器99%的IP被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会随机切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，还是可以使用 `2Captcha` 或 `yescaptcha` 的API破解验证码，也可以托管自己的服务器，ip大概率不会被ban  [参考教程](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 > 3. `Google reCaptcha v2` 项目是先执行语音验证，语音验证失败再执行图片验证<br/>
 > 4. `Google reCaptcha v3` 评分验证还没弄明白这个网站入口在哪块，代码有写v3验证方法，现在是忽略v3验证，成功率基本100%就没管v3，有懂的可以研究下
 
