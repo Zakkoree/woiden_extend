@@ -10,7 +10,7 @@
 > **Warning** 
 > 1. `Github Action` 上的 `Google reCaptcha` 验证基本触发不了， `Github Action` 服务器99%的IP都被 `Google` ban了，因为服务器被人滥用过IP被识别为机器人，所以只能使用 `2Captcha` 或 `YesCaptcha` 的API破解验证码，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 > 3. `Google reCaptcha v2` 登陆验证是先执行语音验证，语音验证失败再执行图片验证，语音验证频繁调用会被ben(没几次就会被ben，不用担心应该就ben一两个小时左右)<br/>
-> 4. `Google reCaptcha v3` 续订时候评分验证，代码有写v3验证方法，加与不加感觉没有区别，我还没弄明白这个方法到底有用没有还是没找到入口，现在是忽略v3验证，成功率基本100%就没管v3了，有懂的朋友可以研究下
+> 4. `Google reCaptcha v3` 续订时候评分验证，代码有写v3验证方法，加与不加感觉没有区别，我还没弄明白我这个方法到底有没有用还是我没找到入口，现在是忽略v3验证，成功率基本100%就没管v3了，有懂的朋友可以研究下
 
 > Hax的续订没有调试，两个没什么差别，需要修改下配置
 
