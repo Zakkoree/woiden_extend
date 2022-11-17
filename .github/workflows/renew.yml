@@ -58,6 +58,9 @@ jobs:
           git config --local user.name "Zakkoree"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           python3 main.py
+          a=$(cat renewTime)
+          b=${a//-/.}
+          sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" txt
           git commit -a -m "download file"
           git push
   
