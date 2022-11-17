@@ -89,4 +89,4 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 
 #
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已经弃用，留作参考
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已经弃用
