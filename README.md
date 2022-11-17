@@ -16,7 +16,7 @@ github action默认每天执行3次任务，正确情况下只需一次就可以
 
 
 ## 参数
-> ```
+> ```(python)
 > USERNAME=Woiden或Hax的用户名
 > PASSWORD=Woiden或Hax的密码
 > TWOCAPTCHA_TOKEN=2Captcha的Token
