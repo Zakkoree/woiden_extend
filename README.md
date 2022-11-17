@@ -90,4 +90,4 @@ python script和docker运行需要稍微修改 (不能提醒最后续签日期 �
 
 #
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目基础修改的，已经弃用
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已经弃用
