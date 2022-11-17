@@ -1,5 +1,5 @@
 
-# ~~Woiden Hax Auto Extend~~ (删库跑路) <img align="right" src="https://img.shields.io/badge/2022.11.16-activity-success" />
+# ~~Woiden And Hax Auto Extend~~ (删库跑路) <img align="right" src="https://img.shields.io/badge/2022.11.16-activity-success" />
 
 **Woiden和Hax自动续订** 
 
