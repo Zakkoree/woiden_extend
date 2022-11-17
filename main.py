@@ -193,7 +193,7 @@ def openLoginUrl(page):
         logger.info("fill password")
         page.locator("input[id=\"password\"]").fill(PASSWORD)
         page.click('iframe[title="reCAPTCHA"]')
-        page.click('iframe[title="reCAPTCHA"]')
+#         page.click('iframe[title="reCAPTCHA"]')
     except Exception as e:
         logger.error(e)
         openLoginNum += 1
@@ -423,7 +423,8 @@ def reCAPTCHA(page):
         logger.warn(
             "Possibly blocked by google. Change IP,Use Proxy method for requests")
         logger.info("Audio verify fail,try picture fuck reCAPTCHA")
-        return twoCaptcha(page)
+        return False
+#         return twoCaptcha(page)
 
 
 def numCAPTCHA(page):
