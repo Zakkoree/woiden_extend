@@ -28,7 +28,8 @@ python script和docker运行需要稍微修改(不能提醒最后续签日期 �
 `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]` 
 - 自己服务器 + crontab
 
-将docker镜像pull下来，把命令添加到crontab里面  
+将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面
+`python3 main.py`
 `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]`
 
 ## 特性
