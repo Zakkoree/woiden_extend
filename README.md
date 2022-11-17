@@ -10,8 +10,8 @@
 
 > Hax续订没有调试，需要修改下配置，两个没什么差别，只需要修改URL
 
-> `Google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证挺稳定，项目目前是先执行语音验证，语音验证失败再执行图片验证<br/>
-> `Google reCaptcha v3` 评分验证目前没弄明白这个网站入口在哪块，代码有写v3验证方法，目前是忽略v3验证，成功率挺正常就没管v3，正常情况代码自动重试5次内就可以成功，有懂的同学可以研究下
+> `Google reCaptcha v2` 语音验证有可被ban，因为github的Actions虚机托管在Azure上，每次重新执行Actions的run workflow都会导致切换公网IP，有的IP被别人使用过（干啥就不知道了嘿嘿！），所以识别成了机器人，图片验证稳定，项目是先执行语音验证，语音验证失败再执行图片验证<br/>
+> `Google reCaptcha v3` 评分验证还没弄明白这个网站入口在哪块，代码有写v3验证方法，现在是忽略v3验证，成功率挺正常就没管v3，正常情况代码自动重试5次内就可以成功，有懂的同学可以研究下
 
 > **Warning** 已知问题：Github Action语音验证触发不了，在本地测试可以
 
@@ -27,7 +27,7 @@
 
 ## 使用方式
 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，今日前七天内，不能是当日，之后就不用管了
-python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
+python script和docker运行需要稍微修改 (执行失败不能提醒最后续签日期)
 
 - Github Action
 
