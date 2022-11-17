@@ -9,12 +9,11 @@
 
 Hax需要修改下参数
 
-+ 添加`BAIDU语音识别API`，用于音频验证(新用户免费一年30000次)
-+ 添加`TWOCAPTCHA_TOKEN`，在音频验证码不可用时选择这个验证(收费，一次6分钱)
+
 
 
 ## 支持方式
-python script和docker运行需要稍微修改(不能提醒最后续签日期 目前集成在github action)
+python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
 
 - github action
 
@@ -36,8 +35,12 @@ python script和docker运行需要稍微修改(不能提醒最后续签日期 �
 2. `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx  -e HOST=hax.co.id  -it --rm  [镜像]`
 
 ## 特性
+- 添加`BAIDU语音识别API`，用于音频验证 (新用户免费一年30000次)
+- 添加`TWOCAPTCHA_TOKEN`，在音频验证码不可用时选择这个验证 (收费，一次6分钱)
 
-
+## 计划添加
+- 讯飞语音识别API (每个月免费使用500次)
+- yescaptcha (新用户免费1500次   价格便宜)
 
 
 
