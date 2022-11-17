@@ -15,6 +15,9 @@ github action每天执行3次任务，正确情况下只需一次就可以成功
 > `google reCaptcha v3` 验证目前没弄明白这个网站入口在哪块，代码有v3方法，目前是跳过v3验证，成功率挺正常，正常情况代码自动重试5次内就可以成功，有懂的可用研究下google reCaptcha v3
 
 
+## 参数
+
+
 
 ## 支持方式
 python script和docker运行需要稍微修改 (不能提醒最后续签日期 目前集成在github action)
