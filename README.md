@@ -25,13 +25,13 @@
 <kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一种,关联下面三组参数 ( [docker不支持讯飞](#001) )
-> `ASR_CHOICE: BAIDU 或 XF 或 IBM`
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `IBM` 两种选一种,关联下面三组参数 ( [使用讯飞 `XF`](#001) )
+> `ASR_CHOICE: BAIDU 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
 >> `API_KEY: 百度语音API的API_KEY`</br>
 >> `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - 讯飞 API需要的参数</br>
+> - ~~讯飞 API需要的参数~~</br>
 >> `APP_ID: 讯飞语音API的APP_ID`</br>
 >> `API_KEY: 讯飞语音API的API_KEY`</br>
 >> `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
@@ -96,7 +96,7 @@
 <kbd>**语音识别**</kbd>
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
-讯飞语音方法已经接入，`Github Action` 正常使用，不过 `docker build` 会出现依赖冲突各种问题未能解决，来大佬提示一下 [xfyunAPI.py](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py)
+讯飞语音方法已经接入，`Github Action` 可以正常使用， `docker build` 会出现依赖冲突各种问题未能解决，要使用讯飞请打开 main.py [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-386) 的注释，把[xfyunAPI.py 依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-10) 添加到 [requirements.txt](https://github.com/Zakkoree/woiden_extend/blob/main/requirements.txt)，来个大佬提示一下冲突和依赖问题
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
