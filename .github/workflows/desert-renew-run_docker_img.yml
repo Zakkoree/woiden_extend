@@ -38,5 +38,4 @@ jobs:
           
       - name: 'Working'
         run: |
-          cd HaxExtend
-          python ./main.py "${{ secrets.API_KEY }}" "${{ secrets.APP_ID }}" "${{ secrets.SECRET_KEY }}" "${{ secrets.USERNAME }}" "${{ secrets.PASSWORD }}" "${{ secrets.TWOCAPTCHA_TOKEN }}" "woiden.id"
+          python ./HaxExtend/main.py "${{ secrets.API_KEY }}" "${{ secrets.APP_ID }}" "${{ secrets.SECRET_KEY }}" "${{ secrets.USERNAME }}" "${{ secrets.PASSWORD }}" "${{ secrets.TWOCAPTCHA_TOKEN }}" "woiden.id"
