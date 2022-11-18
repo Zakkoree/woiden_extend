@@ -19,6 +19,7 @@ jobs:
           
       - name: Run a multi-line script
         run: |
+          sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
           docker build -t zakkoree/woiden_extend .
           
       # Runs a set of commands using the runners shell
