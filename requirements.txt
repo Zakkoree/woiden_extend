@@ -12,6 +12,6 @@ greenlet
 pycparser==2.19
 six==1.12.0
 websocket==0.2.1
-websocket-client==0.56.0
+websocket-client
 ibm_watson
 ibm_cloud_sdk_core
