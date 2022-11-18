@@ -21,15 +21,20 @@
 >> `PASSWORD`: Woiden或Hax的密码</br>
 >> `TWOCAPTCHA_TOKEN`: 2Captcha的Token</br>
 
-> <kbd>**可选参数**</kbd> Telegram 推送参数</br>
+> <kbd>**可选参数**</kbd> Telegram 推送参数
 >> `TELE_ID`: telegram用户ID</br>
 >> `TELE_TOKEN`: telegrambot_token机器人Token</br>
 
 > <kbd>**可选参数**</kbd> 语音验证API，支持 `BAIDU` `XF` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
 >> `ASR_CHOICE`: `BAIDU` 或 `XF` 或 `IBM`
->> `APP_ID`: 百度语音API的APP_ID</br>
->> `API_KEY`: 百度语音API的API_KEY</br>
->> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
+>> - BAIDU的参数
+>>> `APP_ID`: 百度语音API的APP_ID</br>
+>>> `API_KEY`: 百度语音API的API_KEY</br>
+>>> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
+>> - XF的参数
+>>> 啊啊啊啊
+>> - IBM的参数
+>>> 安安安安安安
 
 ## 使用
 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，修改为你现在日期前六天内都行，不能是今日，不然今天就不会执行了，之后就不用管了</br>
