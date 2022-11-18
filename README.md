@@ -85,17 +85,12 @@
 ```
 - Docker
 ```
- docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -e ASR_CHOICE=xxx -it --rm  [镜像名]
+ docker run -e USERNAME=xxx -e PASSWORD=xxx -e ASR_CHOICE=xxx [你的参数] -it --rm  zakkoree/woiden_extend
 ```
 - 自己服务器 + Crontab
 ```
  将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面
 ```
-> **Warning** <kbd>**注意**</kbd> 别使用我的镜像,有可能是旧的或测试用的
-
-
-
-
 
 ## 集成
 <kbd>**语音识别**</kbd>
