@@ -22,10 +22,10 @@
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 图片验证和V3验证，不设置会跳过图片验证和V3验证
+<kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一种,关联下面三组参数，不设置会跳过语音验证
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一种,关联下面三组参数(docker不支持讯飞[详细](#001))
 > `ASR_CHOICE: BAIDU 或 XF 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
@@ -97,7 +97,7 @@
 
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br>
-讯飞语音方法已经接入，`Github Action` 正常使用，不过 `docker build` 会出现依赖冲突各种问题未能解决，来个大佬提示一下 [xfyunAPI.py](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py)
+<p id="001">讯飞语音方法已经接入，`Github Action` 正常使用，不过 `docker build` 会出现依赖冲突各种问题未能解决，来个大佬提示一下 [xfyunAPI.py](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py)</p>
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
