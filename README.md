@@ -27,15 +27,15 @@
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
 > `ASR_CHOICE`: `BAIDU` 或 `XF` 或 `IBM`
-> - 百度 API需要的参数
+>> - 百度 API需要的参数
 >> `APP_ID`: 百度语音API的APP_ID</br>
 >> `API_KEY`: 百度语音API的API_KEY</br>
 >> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
-> - 讯飞 API需要的参数
+>> - 讯飞 API需要的参数
 >> `APP_ID`: 讯飞语音API的APP_ID</br>
 >> `API_KEY`: 讯飞语音API的API_KEY</br>
 >> `SECRET_KEY`: 讯飞语音API的SECRET_KEY</br>
-> - IBM API需要的参数
+>> - IBM API需要的参数
 >> `APP_ID`: IBM API的IDkey</br>
 >> `IBM_URL`: IBM API的URL</br>
 
@@ -103,7 +103,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
 `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
-- [ ] `Azure API` 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
+- [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
 - [ ] - [ ] ~~`Google API`~~ 要挂代理访问，需付费，注册需外币卡
 
 <kbd>图片识别</kbd>
