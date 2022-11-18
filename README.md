@@ -81,9 +81,10 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 </details>
 
 - Python Script
-    
- `configuration env ...`
- `python3 main.py`
+```
+ configuration env ...
+ python3 main.py
+```
 - Docker
 
 > `docker run -e USERNAME=xxx -e PASSWORD=xxx -e TWOCAPTCHA_TOKEN=xxx -e APP_ID=xxx -e API_KEY=xxx -e SECRET_KEY=xxx -e TELE_ID=xxx -e TELE_TOKEN=xxx -e ASR_CHOICE=xxx -it --rm  [镜像]`
