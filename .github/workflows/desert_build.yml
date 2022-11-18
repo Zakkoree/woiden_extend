@@ -20,6 +20,6 @@ jobs:
       - name: Run
         run: |
           cd HaxExtend
-          docker build -t vbnmxcz/hax_extend .
-          docker push vbnmxcz/hax_extend
+          docker build -t zakkoree/hax_extend .
+          docker push zakkoree/hax_extend
           
