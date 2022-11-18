@@ -89,7 +89,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 
 <kbd>图片识别</kbd>
 - [x] `2Captcha API` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
-- [ ] ~~`Yes Captcha API`~~ 新用户免费1500次，100次/1¥
+- [ ] ~~`Yes Captcha API`~~ 100次/1¥，新用户免费1500次
 
 #
 
