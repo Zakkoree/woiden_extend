@@ -20,12 +20,12 @@
 > `USERNAME: Woiden或Hax的用户名`</br>
 > `PASSWORD: Woiden或Hax的密码`</br>
 
-<kbd>**可选参数**</kbd> 图片验证和V3验证，不设置会跳过图片验证和V3验证
-> `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
-
 <kbd>**可选参数**</kbd> Telegram 推送参数
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`</br>
+
+<kbd>**可选参数**</kbd> 图片验证和V3验证，不设置会跳过图片验证和V3验证
+> `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一种,关联下面三组参数，不设置会跳过语音验证
 > `ASR_CHOICE: BAIDU 或 XF 或 IBM`
