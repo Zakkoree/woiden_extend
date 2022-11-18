@@ -81,6 +81,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 </details>
 
 - Python Script
+    
  `configuration env ...`
  `python3 main.py`
 - Docker
