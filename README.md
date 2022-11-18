@@ -44,8 +44,8 @@
 
 - Github Action
 > 将参数添加到Secret，执行续订任务</br>
-> 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率</br>
-> 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
+> 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率</br>
+> 可调整为 `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，降低解码平台费用</br>
 
 <details>
  <summary>计划任务语法</summary>
