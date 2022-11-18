@@ -8,7 +8,7 @@
 `activity` 徽章显示最后成功执行的日期，项目是否稳定运行，由于 Github 是 UTC 时区会有时差，一天误差属于正常
 
 > **Warning** 
-> 1. `Github Action` 上的有些IP都被 `Google` ban了，因为服务器被人滥用过IP被识别为机器人，语音验证随缘，使用 `2Captcha` 或 `YesCaptcha` 不受影响，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
+> 1. `Github Action` 上的有些IP都被 `Google` ban了，因为服务器被人滥用过IP被识别为机器人，语音验证随缘，使用 `2Captcha` 和 `YesCaptcha` 不受影响相对稳定，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 > 3. `Google reCaptcha v2` 登陆验证是先执行语音验证，语音验证失败再执行图片验证，语音验证频繁调用会被ben(没几次就会被ben，不用担心应该就ben一两个小时左右)<br/>
 > 4. `Google reCaptcha v3` 续订时候评分验证，代码有写v3验证方法，加与不加感觉没有区别，我还没弄明白我这个方法到底有没有用还是我没找到入口，现在是忽略v3验证，成功率基本100%就没管v3了，有懂的朋友可以研究下
 > 5. 只配置了 `woiden.id` 续订，`hax.co.id` 的续订没有配置，两个没什么差别
