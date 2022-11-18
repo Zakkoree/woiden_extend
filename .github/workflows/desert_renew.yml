@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: "run"
         run: |
-          docker pull vbnmxcz/hax_extend:latest
+          docker pull zakkoree/hax_extend:latest
           docker run -e USERNAME=${{ secrets.USERNAME }} \
           -e PASSWORD=${{ secrets.PASSWORD }} \
           -e TWOCAPTCHA_TOKEN=${{ secrets.TWOCAPTCHA_TOKEN }} \
