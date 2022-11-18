@@ -27,17 +27,11 @@ from commonlog import Logger
 from playwright.sync_api import Playwright, sync_playwright, expect
 from twocaptcha import TwoCaptcha
 
-
-
-
-# secret
 # 用户信息
 USERNAME = os.environ['USERNAME']
 PASSWORD = os.environ['PASSWORD']
 # 2CAPTCHA TOKEN
 TWOCAPTCHA_TOKEN = os.environ['TWOCAPTCHA_TOKEN']
-
-
 
 origin_host = "woiden.id"
 renew_path = "/vps-renew"
