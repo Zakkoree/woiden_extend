@@ -18,8 +18,8 @@ import requests
 import ffmpy3
 import urllib
 import telepot
-import xfyunAPI
 import ibmAPI
+# import xfyunAPI
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from aip import AipSpeech
@@ -379,11 +379,11 @@ def audioToText(audioFile):
             IBM_KEY = os.environ['API_KEY']
             return ibmAPI.asr(IBM_KEY, IBM_URL, audioFile)
 
-        elif ASR_CHOICE == "XF":
-            APP_ID = os.environ['APP_ID']
-            API_KEY = os.environ['API_KEY']
-            SECRET_KEY = os.environ['SECRET_KEY']
-            return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
+#         elif ASR_CHOICE == "XF":
+#             APP_ID = os.environ['APP_ID']
+#             API_KEY = os.environ['API_KEY']
+#             SECRET_KEY = os.environ['SECRET_KEY']
+#             return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
             return None
