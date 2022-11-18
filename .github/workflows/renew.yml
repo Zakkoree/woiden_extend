@@ -1,4 +1,4 @@
-name: renew
+name: 续订
 
 on: 
   workflow_dispatch:
@@ -13,6 +13,8 @@ env:
   TWOCAPTCHA_TOKEN: ${{ secrets.TWOCAPTCHA_TOKEN }}
   TELE_ID: ${{ secrets.TELE_ID }}
   TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
+  ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
+  IBM_URL: ${{ secrets.IBM_URL }}
 
 jobs:
   check:
