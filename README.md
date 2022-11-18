@@ -84,7 +84,7 @@
 ```
 - Docker
 ```
- docker run -e USERNAME=xxx -e PASSWORD=xxx -e ASR_CHOICE=xxx [你的参数] -it --rm  zakkoree/woiden_extend
+ docker run -e USERNAME=xxx -e PASSWORD=xxx [可选参数] -it --rm  zakkoree/woiden_extend
 ```
 - 自己服务器 + Crontab
 ```
