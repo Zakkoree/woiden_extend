@@ -25,7 +25,7 @@
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一个就行,关联下面三组参数，不设置会跳过语音验证
 > `ASR_CHOICE: BAIDU 或 XF 或 IBM`
 >> - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
@@ -104,7 +104,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
 `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
 - [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
-- [ ] - [ ] ~~`Google API`~~ 要挂代理访问，需付费，注册需外币卡
+- [ ] ~~`Google API`~~ 要挂代理访问，需付费，注册需外币卡
 
 <kbd>**图片识别**</kbd>
 - [x] `2Captcha API` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
