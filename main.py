@@ -73,7 +73,7 @@ def send(message):
         bot.sendMessage(os.environ['TELE_ID'], message, parse_mode=None, disable_web_page_preview=None, disable_notification=None,
                     reply_to_message_id=None, reply_markup=None)
         logger.info("Telebot push")
-    except:
+    except Exception as e:
         logger.error(e)
 
 def barkPush(body):
