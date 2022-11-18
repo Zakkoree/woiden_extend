@@ -94,10 +94,12 @@
 
 ## 集成
 <kbd>**语音识别**</kbd>
-- [x] `xfyun API` 每个月免费500次额度
+
 - [x] `BaiDu API` 新用户免费一年30000次
+- [x] ~~`xfyun API`~~ 每个月免费500次额度</br>
+讯飞语音方法已经接入，`Github Action` 正常使用，不过 `docker build` 会出现依赖冲突未能解决，来个大佬解决一下冲突 [xfyunAPI.py](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py)
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
-分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度</br>
+分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
 `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
 - [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
