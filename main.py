@@ -43,7 +43,7 @@ google_recaptchaV3_js_path = "/dist/js/renew-vps.js"
 timeout = 1000 * 60 * 2
 # 登陆重试次数
 loginRetryNum = 3
-# 续订重试次数  0=直到续订成功(不建议使用0 没测试过是否可以续订成功 正常的5次以内可以成功)  
+# 续订重试次数  0=直到续订成功(虽然不用重新登陆验证,但不建议使用0,不可控,正常的5次以内可以成功)  
 extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
