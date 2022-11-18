@@ -1,4 +1,4 @@
-name: build docker image
+name: build image
 
 on:
   # Allows you to run this workflow manually from the Actions tab
