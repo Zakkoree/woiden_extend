@@ -30,8 +30,6 @@ from twocaptcha import TwoCaptcha
 # 用户信息
 USERNAME = os.environ['USERNAME']
 PASSWORD = os.environ['PASSWORD']
-# 2CAPTCHA TOKEN
-TWOCAPTCHA_TOKEN = os.environ['TWOCAPTCHA_TOKEN']
 
 origin_host = "woiden.id"
 renew_path = "/vps-renew"
@@ -47,8 +45,6 @@ loginRetryNum = 3
 extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
-
-solver = TwoCaptcha(TWOCAPTCHA_TOKEN)
 
 logger = Logger(LoggerName="HaxExtend")
 
@@ -229,10 +225,8 @@ def recaptchaV3(page):
     action = bs[actionStart : actionEnd]
     logger.info("action:" + action)
 
-    # api_key = os.getenv('APIKEY_2CAPTCHA', TWOCAPTCHA_TOKEN)
-    # solver = TwoCaptcha(api_key)
-    # https://woiden.id/vps-renew/
     try:
+        solver = TwoCaptcha(os.environ['TWOCAPTCHA_TOKEN'])
         result = solver.recaptcha(
             sitekey=sitekey,
             url='https://' + origin_host + renew_path,
@@ -397,6 +391,7 @@ def baiduAPI(APP_ID, API_KEY, SECRET_KEY, audioFile):
 def twoCaptcha(page):
     openLoginUrl(page)
     try:
+        solver = TwoCaptcha(os.environ['TWOCAPTCHA_TOKEN'])
         g_recaptcha = page.locator(".g-recaptcha")
         sitekey = g_recaptcha.get_attribute("data-sitekey")
         result = solver.recaptcha(
