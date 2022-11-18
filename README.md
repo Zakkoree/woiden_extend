@@ -44,7 +44,7 @@
 2. 不使用 `Github Action` 和构建 `docker` 镜像需要修改 [main.py](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L30) 第 30 行改为 `GITHUB = False` 
 
 - Github Action
-> 将参数添加到Secret，执行 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml)</br>
+> 将参数添加到Secret，执行续订任务</br>
 > 默认手动+cron， `0 0,8,16 * * *` 每天早上 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率</br>
 > 可调整为 `0 0,8,16 */3 * *` 每三天早上 `0/8/16` 点执行，降低解码平台费用</br>
 
@@ -96,7 +96,7 @@
 <kbd>**语音识别**</kbd>
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
-讯飞语音方法已经接入，`Github Action` 可以正常使用， `docker build` 会出现依赖冲突各种问题未能解决，要使用讯飞请打开 main.py [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释，把[xfyunAPI.py 依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 添加到 [requirements.txt](https://github.com/Zakkoree/woiden_extend/blob/main/requirements.txt)，来个大佬提示一下冲突和依赖问题
+讯飞语音方法已经接入，`Github Action` 可以正常使用， `docker build` 会出现依赖冲突各种问题未能解决，要使用讯飞请打开 main.py [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释，把[xfyunAPI.py 依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 添加到 [requirements.txt](https://github.com/Zakkoree/woiden_extend/blob/main/requirements.txt)，来个大佬提示一下docker下冲突和依赖问题
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
