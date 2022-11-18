@@ -17,7 +17,16 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: test
+      - name: Clone repository
+        uses: actions/checkout@v3
+#         sudo sed -i 's/azure\.//' /etc/apt/sources.list &&   防止apt安装失败
+      - name: Install Python
         run: |
-          ls
+          sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \
+          sudo apt install python3 
+      
+      - name: requirements
+        run: |
+          pip3 install -r ./requirements.txt
+          playwright install --with-deps
   
