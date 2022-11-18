@@ -424,8 +424,8 @@ def twoCaptcha(page):
 def reCAPTCHA(page):
     openLoginUrl(page)
     try:
-        iframe = page.frame_locator("iframe[title='reCAPTCHA 验证将于 2 分钟后过期']")
-        iframe.get_by_role("button", name="改用音频验证").click(timeout=10000)
+        iframe = page.frame_locator("xpath=//iframe[starts-with(@src,'https://www.recaptcha.net/recaptcha/api2/bframe')]")
+        iframe.locator("#recaptcha-audio-button").click(timeout=10000)
         # get the mp3 audio file
         src = iframe.locator("#audio-source").get_attribute("src", timeout = 10000)
         logger.info("Audio src:" + str(src))
