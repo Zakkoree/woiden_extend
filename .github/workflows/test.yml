@@ -1,0 +1,23 @@
+name: 测试
+
+on: 
+  workflow_dispatch:
+env:
+  USERNAME: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  APP_ID: ${{ secrets.APP_ID }}
+  API_KEY: ${{ secrets.API_KEY }}
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  TWOCAPTCHA_TOKEN: ${{ secrets.TWOCAPTCHA_TOKEN }}
+  TELE_ID: ${{ secrets.TELE_ID }}
+  TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
+  ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          ls
+  
