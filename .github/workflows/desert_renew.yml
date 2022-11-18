@@ -1,4 +1,4 @@
-name: 续订:Docker
+name: run docker image
 
 on:
   workflow_dispatch:
