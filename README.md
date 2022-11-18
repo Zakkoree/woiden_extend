@@ -21,12 +21,12 @@
 > `TWOCAPTCHA_TOKEN`: 2Captcha的Token</br>
 >> <kbd>**可选参数**</kbd>
 >> - `Telegram` 推送可选</br>
->> -- `TELE_ID`: telegram用户ID</br>
->> -- `TELE_TOKEN`: telegrambot_token机器人Token</br>
+>>> `TELE_ID`: telegram用户ID</br>
+>>> `TELE_TOKEN`: telegrambot_token机器人Token</br>
 >> - `ASR_CHOICE`: 语音验证API  BAIDU XF IBM
->> - `APP_ID`: 百度语音API的APP_ID</br>
->> `API_KEY`: 百度语音API的API_KEY</br>
->> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
+>>> `APP_ID`: 百度语音API的APP_ID</br>
+>>> `API_KEY`: 百度语音API的API_KEY</br>
+>>> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
 
 ## 使用
 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，修改为你现在日期前六天内都行，不能是今日，不然今天就不会执行了，之后就不用管了</br>
