@@ -16,11 +16,12 @@
 已知问题: `Github Action` 语音验证触发不了，原因是因为系统语言问题，需要修复一下
 
 ## 参数
-> `USERNAME`: Woiden或Hax的用户名</br>
-> `PASSWORD`: Woiden或Hax的密码</br>
-> `TWOCAPTCHA_TOKEN`: 2Captcha的Token</br>
+> <kbd>**必须参数**</kbd>
+>> `USERNAME`: Woiden或Hax的用户名</br>
+>> `PASSWORD`: Woiden或Hax的密码</br>
+>> `TWOCAPTCHA_TOKEN`: 2Captcha的Token</br>
 
-> <kbd>**可选参数**</kbd> `Telegram` 推送可选</br>
+> <kbd>**可选参数**</kbd> Telegram 推送参数</br>
 >> `TELE_ID`: telegram用户ID</br>
 >> `TELE_TOKEN`: telegrambot_token机器人Token</br>
 
