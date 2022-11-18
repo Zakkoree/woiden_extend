@@ -27,15 +27,15 @@
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
 > `ASR_CHOICE: BAIDU 或 XF 或 IBM`
->> - 百度 API需要的参数
+>> - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
 >> `API_KEY: 百度语音API的API_KEY`</br>
 >> `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
->> - 讯飞 API需要的参数
+>> - 讯飞 API需要的参数</br>
 >> `APP_ID: 讯飞语音API的APP_ID`</br>
 >> `API_KEY: 讯飞语音API的API_KEY`</br>
 >> `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
->> - IBM API需要的参数
+>> - IBM API需要的参数</br>
 >> `APP_ID: IBM API的IDkey`</br>
 >> `IBM_URL: IBM API的URL`</br>
 
