@@ -27,6 +27,8 @@ from commonlog import Logger
 from playwright.sync_api import Playwright, sync_playwright, expect
 from twocaptcha import TwoCaptcha
 
+GITHUB = True
+
 # 用户信息
 USERNAME = os.environ['USERNAME']
 PASSWORD = os.environ['PASSWORD']
@@ -124,16 +126,17 @@ def run(page):
     extendState = extend(page, tokenCode)
     
     if extendState:
-        try:
-            now = int(time.time())
-            # 转换为其他日期格式，如："%Y-%m-%d %H:%M:%S"
-            timeArr = time.localtime(now)
-            other_StyleTime = time.strftime("%Y-%m-%d", timeArr)
-            update=open('renewTime', 'w')
-            update.write(other_StyleTime)
-            update.close()
-        except Exception as e:
-            logger.error(e)
+        if GITHUB:
+            try:
+                now = int(time.time())
+                # 转换为其他日期格式，如："%Y-%m-%d %H:%M:%S"
+                timeArr = time.localtime(now)
+                other_StyleTime = time.strftime("%Y-%m-%d", timeArr)
+                update=open('renewTime', 'w')
+                update.write(other_StyleTime)
+                update.close()
+            except Exception as e:
+                logger.error(e)
         logger.info("renew succeed")
         # barkPush('[INFO] renew succeed')
         teleinfomsg = '''
@@ -144,22 +147,31 @@ def run(page):
         '''.format(message)
         send(teleinfomsg)
     else:
-        try:
-            update=open('renewTime', 'w')
-            lastTime = file.read()
-            update.close()
-        except Exception as e:
-            logger.error(e)
-        logger.error("renew fail")
-        # barkPush('[ERROR] renew fail')
-        file.read()
-        teleinfomsg = '''
-        Woiden自动续订脚本
-        Woiden renew fail
-        Last Renew Time {0}
-        有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
-        '''.format(lastTime)
-        send(teleinfomsg)
+        if GITHUB:
+            try:
+                update=open('renewTime', 'w')
+                lastTime = file.read()
+                update.close()
+            except Exception as e:
+                logger.error(e)
+            logger.error("renew fail")
+            # barkPush('[ERROR] renew fail')
+            file.read()
+            teleinfomsg = '''
+            Woiden自动续订脚本
+            Woiden renew fail
+            Last Renew Time {0}
+            有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
+            '''.format(lastTime)
+            send(teleinfomsg)
+        else:
+            teleinfomsg = '''
+            Woiden自动续订脚本
+            Woiden renew fail
+            有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
+            '''.format(lastTime)
+            send(teleinfomsg)
+            
 
 
 def adsClear(page):
