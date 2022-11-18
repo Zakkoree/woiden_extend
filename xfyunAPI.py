@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-#
+#   author: Zakkoree
 #  运行时所安装的第三方库及其版本如下，您可自行逐一或者复制到一个新的txt文件利用pip一次性安装：
 #   cffi==1.12.3
 #   gevent==1.4.0
