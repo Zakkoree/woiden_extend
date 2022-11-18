@@ -19,9 +19,9 @@ jobs:
           
       - name: Run a multi-line script
         run: |
-          docker build -t vbnmxcz/hax_extend .
+          docker build -t zakkoree/woiden_extend .
           
       # Runs a set of commands using the runners shell
       - name: Push to Docker Registry
         run: |
-          docker push vbnmxcz/hax_extend
+          docker push zakkoree/woiden_extend
