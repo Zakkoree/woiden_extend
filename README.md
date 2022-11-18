@@ -19,11 +19,11 @@
 > `USERNAME`: Woiden或Hax的用户名</br>
 > `PASSWORD`: Woiden或Hax的密码</br>
 > `TWOCAPTCHA_TOKEN`: 2Captcha的Token</br>
->> <kbd>**可选参数**</kbd>
->> - `Telegram` 推送可选</br>
->>> `TELE_ID`: telegram用户ID</br>
->>> `TELE_TOKEN`: telegrambot_token机器人Token</br>
->> - `ASR_CHOICE`: 语音验证API  BAIDU XF IBM
+> <kbd>**可选参数**</kbd>
+> <kbd>**可选参数**</kbd> `Telegram` 推送可选</br>
+>> `TELE_ID`: telegram用户ID</br>
+>> `TELE_TOKEN`: telegrambot_token机器人Token</br>
+>> `ASR_CHOICE`: 语音验证API  BAIDU XF IBM
 >>> `APP_ID`: 百度语音API的APP_ID</br>
 >>> `API_KEY`: 百度语音API的API_KEY</br>
 >>> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
