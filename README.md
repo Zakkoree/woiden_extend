@@ -19,6 +19,8 @@
 <kbd>**必须参数**</kbd>
 > `USERNAME: Woiden或Hax的用户名`</br>
 > `PASSWORD: Woiden或Hax的密码`</br>
+
+<kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
 <kbd>**可选参数**</kbd> Telegram 推送参数
