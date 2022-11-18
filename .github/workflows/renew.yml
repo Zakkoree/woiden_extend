@@ -59,7 +59,9 @@ jobs:
           git config --local user.email "1223105850@qq.com"
           git config --local user.name "Zakkoree"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          sed -i -e "s:GITHUB = False:GITHUB = True:g" README.md
           python3 main.py
+          sed -i -e "s:GITHUB = True:GITHUB = False:g" README.md
           a=$(cat renewTime)
           b=${a//-/.}
           sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
