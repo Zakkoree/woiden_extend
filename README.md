@@ -25,7 +25,7 @@
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一个就行,关联下面三组参数，不设置会跳过语音验证
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三种选一种,关联下面三组参数，不设置会跳过语音验证
 > `ASR_CHOICE: BAIDU 或 XF 或 IBM`
 >> - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
