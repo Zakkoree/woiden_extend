@@ -27,14 +27,17 @@
 
 > <kbd>**可选参数**</kbd> 语音验证API，支持 `BAIDU` `XF` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
 >> `ASR_CHOICE`: `BAIDU` 或 `XF` 或 `IBM`
->> - BAIDU的参数
+>> - 百度API的参数
 >>> `APP_ID`: 百度语音API的APP_ID</br>
 >>> `API_KEY`: 百度语音API的API_KEY</br>
 >>> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
->> - XF的参数
->>> 啊啊啊啊
+>> - 讯飞API的参数
+>>> `APP_ID`: 百度语音API的APP_ID</br>
+>>> `API_KEY`: 百度语音API的API_KEY</br>
+>>> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
 >> - IBM的参数
->>> 安安安安安安
+>>> `APP_ID`: IBM API的IDkey</br>
+>>> `IBM_URL`: IBM API的URL</br>
 
 ## 使用
 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime) 文件内日期，修改为你现在日期前六天内都行，不能是今日，不然今天就不会执行了，之后就不用管了</br>
