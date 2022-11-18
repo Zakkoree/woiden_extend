@@ -1,5 +1,5 @@
 """
-
+author: Zakkoree
 """
 # python -m playwright codegen --target python -o 'my.py' -b chromium https://woiden.id/login
 # 安装playwright库
@@ -19,6 +19,7 @@ import ffmpy3
 import urllib
 import telepot
 import xfyunAPI
+import ibmAPI
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from aip import AipSpeech
