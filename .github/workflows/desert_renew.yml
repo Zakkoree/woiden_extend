@@ -1,16 +1,10 @@
 name: 续订:Docker
 
 on:
-#  push:
-  #schedule:
-    # run every 3 days on UTC 0/1/2am (8/9/10am CN time)
-  #   - cron: '0 1 */2 * *'
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   build:
-#     runs-on: self-hosted
     runs-on: ubuntu-latest
     environment: IMAGES
     steps:
