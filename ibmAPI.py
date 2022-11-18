@@ -30,5 +30,5 @@ def asr(IDkey, URL, audioFile):
         for w in i['alternatives']:
             result += w['transcript']
 
-    logger("audio result" + result)
+    logger.info("audio result" + result)
     return result
