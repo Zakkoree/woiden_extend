@@ -5,7 +5,7 @@
 
 `woiden.id` 和 `hax.co.id` 自动续订正常情况下只需一次就可以成功续订，成功率基本💯</br>
 `Github Action` 默认每天执行3次任务，每天只要成功续订一次后面任务就会跳过，不增加多余解码平台费用</br>
-`activity` 徽章显示最后成功执行的日期，由于 Action UTC时区会有时差,有一天误差即可认为本项目稳定运行
+`activity` 徽章显示最后成功执行的日期，项目是否稳定运行，由于 Action UTC时区会有时差,一天误差属于正常现象
 
 > **Warning** 
 > 1. `Github Action` 上的 `Google reCaptcha` 验证基本触发不了， `Github Action` 服务器99%的IP都被 `Google` ban了，因为服务器被人滥用过IP被识别为机器人，所以只能使用 `2Captcha` 或 `YesCaptcha` 的API破解验证码，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
