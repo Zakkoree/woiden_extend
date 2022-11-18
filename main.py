@@ -34,10 +34,6 @@ from twocaptcha import TwoCaptcha
 # 用户信息
 USERNAME = os.environ['USERNAME']
 PASSWORD = os.environ['PASSWORD']
-# 百度API
-APP_ID = os.environ['APP_ID']
-API_KEY = os.environ['API_KEY']
-SECRET_KEY = os.environ['SECRET_KEY']
 # 2CAPTCHA TOKEN
 TWOCAPTCHA_TOKEN = os.environ['TWOCAPTCHA_TOKEN']
 
@@ -365,10 +361,40 @@ def mp3_change_pcm(audioFile):
 
 
 def audioToText(audioFile):
+    ASR_CHOICE = None
+    try:
+        ASR_CHOICE = os.environ['ASR_CHOICE']
+    except:
+        logger.error("ASR_CHOICE is not set, skip ASR")
+            
+    try:
+        if ASR_CHOICE == "BAIDU":
+            APP_ID = os.environ['APP_ID']
+            API_KEY = os.environ['API_KEY']
+            SECRET_KEY = os.environ['SECRET_KEY']
+            return baiduAPI(APP_ID, API_KEY, SECRET_KEY, mp3_change_pcm(audioFile))
+
+        elif ASR_CHOICE == "IBM":
+            IBM_URL = os.environ['IBM_URL']
+            IBM_KEY = os.environ['API_KEY']
+            return ibmAPI.asr(IBM_KEY, IBM_URL, audioFile)
+
+        elif ASR_CHOICE == "XF":
+            APP_ID = os.environ['APP_ID']
+            API_KEY = os.environ['API_KEY']
+            SECRET_KEY = os.environ['SECRET_KEY']
+            return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
+        else :
+            logger.warn("ASR_CHOICE setup error, skip ASR")
+            return None
+    except Exception as e:
+        logger.error(e)
+        return None
+            
+
+def baiduAPI(APP_ID, API_KEY, SECRET_KEY, audioFile):
     client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
-    jsonResult = client.asr(get_file_content(mp3_change_pcm(audioFile)), 'pcm', 16000, {
-        'dev_pid': 1737,
-    })
+    jsonResult = client.asr(get_file_content(audioFile), 'pcm', 16000, {'dev_pid': 1737,})
     result = jsonResult['result'][0]
     logger.info("udio verify code:" + str(jsonResult))
     return result
