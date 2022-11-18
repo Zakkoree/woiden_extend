@@ -24,7 +24,8 @@
 >> `TELE_ID`: telegram用户ID</br>
 >> `TELE_TOKEN`: telegrambot_token机器人Token</br>
 
-> <kbd>**可选参数**</kbd> `ASR_CHOICE`: 语音验证API，支持 `BAIDU` `XF` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
+> <kbd>**可选参数**</kbd> 语音验证API，支持 `BAIDU` `XF` `IBM` 三种,关联下面三组参数，不设置会跳过语音验证
+>> `ASR_CHOICE`: `BAIDU` 或 `XF` 或 `IBM`
 >> `APP_ID`: 百度语音API的APP_ID</br>
 >> `API_KEY`: 百度语音API的API_KEY</br>
 >> `SECRET_KEY`: 百度语音API的SECRET_KEY</br>
