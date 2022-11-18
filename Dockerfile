@@ -1,6 +1,6 @@
 FROM python:bullseye
 
-RUN apt update && apt install --assume-yes -y ffmpeg build-essential libssl-dev libffi-dev python-dev  \
+RUN apt update && apt install --assume-yes -y ffmpeg build-essential libssl-dev libffi-dev python3-dev libfreetype6-dev pkg-config libpng12-dev  \
   && apt clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
