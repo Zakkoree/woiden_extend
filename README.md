@@ -42,8 +42,8 @@
 >> `IBM_URL: IBM API的URL`</br>
 
 ## 使用
-初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内都行，不能是今日，不然今天就不会执行了，之后就不用管了</br>
-不使用 `Github Action` 运行 `python script` 和构建 `docker` 镜像需要修改 [main.py](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L30) 第 30 行改为 GITHUB = False
+1. 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内都行，不能是今日，不然今天就不会执行了，之后就不用管了</br>
+2. 不使用 `Github Action` 和构建 `docker` 镜像需要修改 [main.py](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L30) 第 30 行改为 `GITHUB = False` 
 
 - Github Action
 > 将参数添加到Secret，执行 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml)</br>
