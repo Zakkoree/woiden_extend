@@ -85,7 +85,7 @@ python script和docker运行需要稍微修改 (执行失败不能提醒最后�
 - [x] `BaiDu API` 新用户免费一年30000次
 - [ ] `Aliyun API` 新用户免费三个月
 - [ ] ~~`IBM API`~~ 每个月有免费额度，但准确度不够，注册需外币卡</br>
-分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl</br>
+分享一个来自 [wx5ecc8c432b706 ](https://blog.51cto.com/u_14825502/5706129) 的密钥和URl，不用滥用毕竟就那么一点额度</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
 `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
 - [ ] ~~`Google API`~~ 要挂代理访问，需付费，注册需外币卡
