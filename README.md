@@ -94,7 +94,6 @@
 
 ## 集成
 <kbd>**语音识别**</kbd>
-
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
 讯飞语音方法已经接入，`Github Action` 正常使用，不过 `docker build` 会出现依赖冲突各种问题未能解决，来大佬提示一下 [xfyunAPI.py](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py)
