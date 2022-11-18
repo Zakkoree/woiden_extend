@@ -27,7 +27,7 @@ from commonlog import Logger
 from playwright.sync_api import Playwright, sync_playwright, expect
 from twocaptcha import TwoCaptcha
 
-GITHUB = True
+GITHUB = False
 
 # 用户信息
 USERNAME = os.environ['USERNAME']
