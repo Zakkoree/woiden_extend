@@ -1,4 +1,4 @@
-name: 续订Docker
+name: 续订:Docker
 
 on:
 #  push:
@@ -16,12 +16,13 @@ jobs:
     steps:
       - name: "run"
         run: |
-          docker pull zakkoree/hax_extend:latest
+          docker pull zakkoree/woiden_extend:latest
           docker run -e USERNAME=${{ secrets.USERNAME }} \
           -e PASSWORD=${{ secrets.PASSWORD }} \
           -e TWOCAPTCHA_TOKEN=${{ secrets.TWOCAPTCHA_TOKEN }} \
           -e APP_ID=${{ secrets.APP_ID }} \
           -e API_KEY=${{ secrets.API_KEY }} \
           -e SECRET_KEY=${{ secrets.SECRET_KEY }} \
-          -e HOST=woiden.id \
-          vbnmxcz/hax_extend:latest
+          -e ASR_CHOICE=${{ secrets.ASR_CHOICE }} \
+          -e IBM_URL=${{ secrets.IBM_URL }} \
+          zakkoree/woiden_extend:latest
