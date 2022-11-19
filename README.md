@@ -10,7 +10,7 @@
 > **Warning** 
 > 1. `Github Action` 运行时所在的服务器IP可能被 `Google` ban 无法使用语音验证，因为服务器是公用的被别人用过了，IP被识别为机器人，可能上个人刚好也调用了 `Google reCaptcha` ，所以 `Google reCaptcha v2` 的语音验证调用成功随缘，使用 `2Captcha` 和 `YesCaptcha` 的图片验证不受此影响稳如老狗，甚至即使不加载出来也可以验证通过，建议语音图片两个同时使用即稳定也不费钱，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)</br>
 > 3. `Google reCaptcha v2` 登陆时脚本是先执行语音验证，验证失败再执行图片验证，语音验证频繁调用会被ben(没几次就会被ben，不用担心应该就ben一两个小时左右)，使用语音验证最好时间间隔久点<br/>
-> 4. `Google reCaptcha v3` 续订时评分验证，代码有写v3验证方法，加与不加感觉没有区别，还没弄明白我这个方法到底有没有用呢还是我没找到入口呢，现在是忽略v3验证，成功率基本100%就没管v3了，有懂的朋友可以研究下
+> 4. `Google reCaptcha v3` 续订时评分验证，代码有写v3验证方法，加与不加感觉没有区别，还没弄明白是我这个方法到底有没有用呢还是我没找到入口呢，现在是忽略v3验证，成功率基本100%就没管v3了，有懂的朋友可以研究下
 > 5. 只配置了 `woiden.id` 续订，`hax.co.id` 的续订没有配置，两个没什么差别，看着改应该问题不大吧
 
 ## 参数
@@ -98,9 +98,9 @@
 <kbd>**语音识别**</kbd>
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] `xfyun API` 每个月 500 次免费音频流</br><a id='001' />
- ✅ `Github Action` 正常使用</br>
+ ✅ `Github Action` 正常</br>
  ❎ `Docker Build` 镜像不含讯飞语音识别，因为加讯飞构建会出现各种依赖冲突和需要的系统软件包，未解决</br>
- ⚠ `Python Script` 需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
+ ⚠ `Python Script` 使用 Python 运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
 - [x] `IBM API` 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就这么 500 分钟，或许已经没时间了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
@@ -114,4 +114,4 @@
 
 #
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已经弃用
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用
