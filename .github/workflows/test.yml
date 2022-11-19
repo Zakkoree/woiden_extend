@@ -2,8 +2,6 @@ name: 测试
 
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: "0 0,8,16 * * *"
 env:
   USERNAME: ${{ secrets.USERNAME }}
   PASSWORD: ${{ secrets.PASSWORD }}
@@ -16,21 +14,52 @@ env:
   ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
   IBM_URL: ${{ secrets.IBM_URL }}
 
+#       sudo sed -i 's/azure\.//' /etc/apt/sources.list 防止apt安装失败
+
 jobs:
-  test:
+  renew:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+        
       - name: Install Python
         run: |
           sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \
           sudo apt install python3 
-      - name: requirements
+      
+      - name: Install requirements
         run: |
           pip3 install -r ./requirements.txt
           pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
           playwright install --with-deps
-      - name: test
+      - name: Renew
         run: |
-          python3 xfyunAPI.py
+          sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
+          sed -i -e "s:# import xfyunAPI:import xfyunAPI:g" main.py
+          sed -i -e "s:#         elif ASR_CHOICE == 'XFYUN':         elif ASR_CHOICE == 'XFYUN':g" main.py
+          sed -i -e "s:#            XFYUN_APP_ID:            XFYUN_APP_ID:g" main.py
+          sed -i -e "s:#            XFYUN_API_KEY:            XFYUN_API_KEY:g" main.py
+          sed -i -e "s:#            XFYUN_SECRET_KEY:            XFYUN_SECRET_KEY:g" main.py
+          sed -i -e "s:#            return xfyunAPI.asr:            return xfyunAPI.asr:g" main.py
+          cat main.py
+          python3 main.py
+          
+          sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
+          sed -i -e "s:import xfyunAPI:# import xfyunAPI:g" main.py
+          sed -i -e "s:         elif ASR_CHOICE == 'XFYUN':#         elif ASR_CHOICE == 'XFYUN':g" main.py
+          sed -i -e "s:            XFYUN_APP_ID:#            XFYUN_APP_ID:g" main.py
+          sed -i -e "s:            XFYUN_API_KEY:#            XFYUN_API_KEY:g" main.py
+          sed -i -e "s:            XFYUN_SECRET_KEY:#            XFYUN_SECRET_KEY:g" main.py
+          sed -i -e "s:            return xfyunAPI.asr:#            return xfyunAPI.asr:g" main.py
+          
+          a=$(cat renewTime)
+          b=${a//-/.}
+          sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
+      - name: Push
+        run: |
+          git config --local user.email "1223105850@qq.com"
+          git config --local user.name "Zakkoree"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -a -m "download file"
+          git push
