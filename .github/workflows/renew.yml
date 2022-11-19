@@ -21,8 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       check: ${{ steps.check.outputs.check }}
+#       sudo sed -i 's/azure\.//' /etc/apt/sources.list 防止apt安装失败
     steps:
-      - name: check
+      - name: Clone repository
         uses: actions/checkout@v3
         
       - id: check
@@ -40,25 +41,22 @@ jobs:
     needs: check
     if: needs.check.outputs.check == 'success'
     steps:
-      - name: clone repository
+      - name: Clone repository
         uses: actions/checkout@v3
       - name: Install Python
         run: |
-          # sudo sed -i 's/azure\.//' /etc/apt/sources.list 防止apt安装失败
           sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \ 
           sudo apt install python3 
       
-      - name: install requirements
+      - name: Install requirements
         run: |
           pip3 install -r ./requirements.txt
           pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
           playwright install --with-deps
 
-      - name: renew
+      - name: Renew
         run: |
-          # 打开更新日期
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
-          # 打开讯飞语音配置
           sed -i -e "s:# import xfyunAPI:import xfyunAPI:g" main.py
           sed -i -e "s:#         elif ASR_CHOICE == 'XF':         elif ASR_CHOICE == 'XF':g" main.py
           sed -i -e "s:#            XF_APP_ID:            XF_APP_ID:g" main.py
@@ -66,9 +64,8 @@ jobs:
           sed -i -e "s:#            XF_SECRET_KEY:            XF_SECRET_KEY:g" main.py
           sed -i -e "s:#            return xfyunAPI.asr:            return xfyunAPI.asr:g" main.py
           
-          # 执行续订
           python3 main.py
-          # 还原配置
+          
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
           sed -i -e "s:import xfyunAPI:# import xfyunAPI:g" main.py
           sed -i -e "s:         elif ASR_CHOICE == 'XF':#         elif ASR_CHOICE == 'XF':g" main.py
@@ -76,13 +73,12 @@ jobs:
           sed -i -e "s:            XF_API_KEY:#            XF_API_KEY:g" main.py
           sed -i -e "s:            XF_SECRET_KEY:#            XF_SECRET_KEY:g" main.py
           sed -i -e "s:            return xfyunAPI.asr:#            return xfyunAPI.asr:g" main.py
-          # 修改续订时间
+          
           a=$(cat renewTime)
           b=${a//-/.}
           sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
-      - name: push
+      - name: Push
         run: |
-          # 配置提交信息
           git config --local user.email "1223105850@qq.com"
           git config --local user.name "Zakkoree"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
