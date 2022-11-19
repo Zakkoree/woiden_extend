@@ -17,42 +17,16 @@ env:
 #       sudo sed -i 's/azure\.//' /etc/apt/sources.list 防止apt安装失败
 
 jobs:
-  renew:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-        
-      - name: Install Python
-        run: |
-          sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \
-          sudo apt install python3 
-      
-      - name: Install requirements
-        run: |
-          pip3 install -r ./requirements.txt
-          pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
-          playwright install --with-deps
-      - name: Renew
+
+      - name: test
         run: |
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
           sed -i '22s/^#//' main.py 
           sed -i '382,386s/^#//' main.py 
           
           cat main.py
-          python3 main.py
-          
-          sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
-          sed -i '22s/^/#/' main.py
-          sed -i '382,386s/^/#/' main.py
-          
-          a=$(cat renewTime)
-          b=${a//-/.}
-          sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
-      - name: Push
-        run: |
-          git config --local user.email "1223105850@qq.com"
-          git config --local user.name "Zakkoree"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git commit -a -m "download file"
-          git push
