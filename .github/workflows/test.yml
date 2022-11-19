@@ -1,4 +1,4 @@
-name: 续订
+name: 
 
 on: 
   workflow_dispatch:
