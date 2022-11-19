@@ -99,7 +99,8 @@
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
 > **Warning**
-> `Github Action` 可以正常使用</br>
+> `Docker Build` 不包含讯飞，会出现各种依赖冲突问题未解决
+> `Github Action` 可以正常使用
 > **Warning** `Docker Build` 会出现各种依赖冲突问题未解决</br>
 > 执行 `Python Script` 也没问题不过 需要修改一下，main.py [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释，把 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
