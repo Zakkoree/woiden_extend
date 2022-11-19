@@ -193,9 +193,9 @@ def asr(APPID, APISecret, APIKey, AudioFile):
 if __name__ == "__main__":
     # 测试时候在此处正确填写相关信息即可运行
     time1 = datetime.now()
-    text = asr(APPID=' ', APISecret=' ',
-                       APIKey=' ',
-                       AudioFile=r'E:\1230.wav')
+    text = asr(APPID=os.environ['APP_ID'], APISecret=os.environ['SECRET_KEY'],
+                       APIKey=os.environ['API_KEY'],
+                       AudioFile=r'audio.pcm')
     print(text)
     time2 = datetime.now()
     print(time2-time1)
