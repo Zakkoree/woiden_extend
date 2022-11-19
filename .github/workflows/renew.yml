@@ -68,7 +68,7 @@ jobs:
           
           # 执行续订
           python3 main.py
-          # 还原默认配置
+          # 还原配置
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
           sed -i -e "s:import xfyunAPI:# import xfyunAPI:g" main.py
           sed -i -e "s:         elif ASR_CHOICE == 'XF':#         elif ASR_CHOICE == 'XF':g" main.py
