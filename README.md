@@ -25,8 +25,8 @@
 <kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `IBM` 两种选一种,关联下面三组参数 ( [使用讯飞 `XF`](#001) )
-> `ASR_CHOICE: BAIDU 或 IBM`
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 两种选一种,关联下面三组参数 ( [Docker不能使用讯飞](#001) )
+> `ASR_CHOICE: BAIDU 、 XF 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
 >> `API_KEY: 百度语音API的API_KEY`</br>
@@ -100,7 +100,7 @@
 - [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
 ✔ `Github Action` 可以正常使用</br>
 ❌ `Docker Build` 镜像不含讯飞，因为加讯飞会出现各种依赖冲突问题未解决</br>
-⚠ `Python Script` 安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，需要修改 main.py [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
+⚠ `Python Script` 安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，需要修改 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
 - [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
