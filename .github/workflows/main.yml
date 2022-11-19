@@ -1,0 +1,36 @@
+name: 续订
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0,8,16 * * *"
+env:
+  USERNAME: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  APP_ID: ${{ secrets.APP_ID }}
+  API_KEY: ${{ secrets.API_KEY }}
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  TWOCAPTCHA_TOKEN: ${{ secrets.TWOCAPTCHA_TOKEN }}
+  TELE_ID: ${{ secrets.TELE_ID }}
+  TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
+  ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
+  IBM_URL: ${{ secrets.IBM_URL }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+      - name: Install Python
+        run: |
+          sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \
+          sudo apt install python3 
+      - name: requirements
+        run: |
+          pip3 install -r ./requirements.txt
+          pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
+          playwright install --with-deps
+      - name: test
+        run: |
+          python3 xfyunAPI.py
