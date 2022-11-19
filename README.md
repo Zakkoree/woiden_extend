@@ -25,13 +25,13 @@
 <kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 两种选一种,关联下面三组参数 ( Docker不能使用讯飞 [详细➡](#001) )
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 两种选一种,关联下面三组参数
 > `ASR_CHOICE: BAIDU 、 XF 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
 >> `API_KEY: 百度语音API的API_KEY`</br>
 >> `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - ~~讯飞 API需要的参数~~</br>
+> - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细➡](#001) )</br>
 >> `APP_ID: 讯飞语音API的APP_ID`</br>
 >> `API_KEY: 讯飞语音API的API_KEY`</br>
 >> `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
@@ -97,7 +97,7 @@
 ## 集成
 <kbd>**语音识别**</kbd>
 - [x] `BaiDu API` 新用户免费一年30000次
-- [x] ~~`xfyun API`~~ 每个月免费500次额度</br><a id='001' />
+- [x] `xfyun API` 每个月免费500次额度</br><a id='001' />
  ✅ `Github Action` 可以正常使用</br>
  ❎ `Docker Build` 镜像不含讯飞，因为加讯飞会出现各种依赖冲突问题未解决</br>
  ⚠ `Python Script` 需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
