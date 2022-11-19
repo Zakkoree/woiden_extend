@@ -35,7 +35,6 @@ jobs:
           playwright install --with-deps
       - name: Renew
         run: |
-          quote=\'
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
           sed -i '22s/^#//' yang 
           sed -i '382,386s/^#//' yang 
