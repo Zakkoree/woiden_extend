@@ -66,7 +66,7 @@ jobs:
           sed -i -e "s:#            XF_API_KEY:            XF_API_KEY:g" main.py
           sed -i -e "s:#            XF_SECRET_KEY:            XF_SECRET_KEY:g" main.py
           sed -i -e "s:#            return xfyunAPI.asr:            return xfyunAPI.asr:g" main.py
-          
+          cat main.py
           python3 main.py
           
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
