@@ -98,7 +98,7 @@
 <kbd>**语音识别**</kbd>
 - [x] `BaiDu API` 新用户免费一年30000次
 - [x] `xfyun API` 每个月免费500次额度</br><a id='001' />
- ✅ `Github Action` 可以正常使用</br>
+ ✅ `Github Action` 正常使用</br>
  ❎ `Docker Build` 镜像不含讯飞语音识别，因为加讯飞构建会出现各种依赖冲突和需要的系统软件包，未解决</br>
  ⚠ `Python Script` 需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
 - [x] `IBM API` 和 Google 一样每个月有免费时长额度，但准确度不够，注册需外币卡</br>
