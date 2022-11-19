@@ -22,7 +22,7 @@ jobs:
     outputs:
       check: ${{ steps.check.outputs.check }}
     steps:
-      - name: Clone repository
+      - name: check
         uses: actions/checkout@v3
         
       - id: check
@@ -40,7 +40,7 @@ jobs:
     needs: check
     if: needs.check.outputs.check == 'success'
     steps:
-      - name: Clone repository
+      - name: clone repository
         uses: actions/checkout@v3
       - name: Install Python
         run: |
@@ -48,13 +48,13 @@ jobs:
           sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \ 
           sudo apt install python3 
       
-      - name: Install requirements
+      - name: install requirements
         run: |
           pip3 install -r ./requirements.txt
           pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
           playwright install --with-deps
 
-      - name: Renew
+      - name: renew
         run: |
           # 打开更新日期
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
@@ -80,7 +80,7 @@ jobs:
           a=$(cat renewTime)
           b=${a//-/.}
           sed -i -e "s:badge/".*"-activity:badge/"$b"-activity:g" README.md
-      - name: Push
+      - name: push
         run: |
           # 配置提交信息
           git config --local user.email "1223105850@qq.com"
