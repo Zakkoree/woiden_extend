@@ -22,7 +22,7 @@
 > `TELE_ID: telegram用户ID`</br>
 > `TELE_TOKEN: telegrambot_token机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 图片验证和V3验证
+<kbd>**可选参数**</kbd> 2Captcha 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` ，三选一
