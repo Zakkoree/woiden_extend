@@ -60,22 +60,14 @@ jobs:
       - name: Renew
         run: |
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
-          sed -i -e "s:# import xfyunAPI:import xfyunAPI:g" main.py
-          sed -i -e "s:#         elif ASR_CHOICE == 'XFYUN':         elif ASR_CHOICE == 'XFYUN':g" main.py
-          sed -i -e "s:#            XFYUN_APP_ID:            XFYUN_APP_ID:g" main.py
-          sed -i -e "s:#            XFYUN_API_KEY:            XFYUN_API_KEY:g" main.py
-          sed -i -e "s:#            XFYUN_SECRET_KEY:            XFYUN_SECRET_KEY:g" main.py
-          sed -i -e "s:#            return xfyunAPI.asr:            return xfyunAPI.asr:g" main.py
-          cat main.py
+          sed -i '22s/^#//' main.py
+          sed -i '382,386s/^#//' main.py
+          
           python3 main.py
           
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
-          sed -i -e "s:import xfyunAPI:# import xfyunAPI:g" main.py
-          sed -i -e "s:         elif ASR_CHOICE == 'XFYUN':#         elif ASR_CHOICE == 'XFYUN':g" main.py
-          sed -i -e "s:            XFYUN_APP_ID:#            XFYUN_APP_ID:g" main.py
-          sed -i -e "s:            XFYUN_API_KEY:#            XFYUN_API_KEY:g" main.py
-          sed -i -e "s:            XFYUN_SECRET_KEY:#            XFYUN_SECRET_KEY:g" main.py
-          sed -i -e "s:            return xfyunAPI.asr:#            return xfyunAPI.asr:g" main.py
+          sed -i '22s/^/#/' main.py
+          sed -i '382,386s/^/#/' main.py
           
           a=$(cat renewTime)
           b=${a//-/.}
@@ -85,5 +77,5 @@ jobs:
           git config --local user.email "1223105850@qq.com"
           git config --local user.name "Zakkoree"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git commit -a -m "download file"
+          git commit -a -m "Renew"
           git push
