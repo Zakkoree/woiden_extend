@@ -35,9 +35,10 @@ jobs:
           playwright install --with-deps
       - name: Renew
         run: |
+          quote=\'
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
           sed -i -e "s:# import xfyunAPI:import xfyunAPI:g" main.py
-          sed -i -e $'s/#         elif ASR_CHOICE == \'XFYUN\'/         elif ASR_CHOICE == \'XFYUN\'/g' main.py
+          sed -i -e "s:#         elif ASR_CHOICE == $quotXFYUN$quote:         elif ASR_CHOICE == $quotXFYUN$quot:g" main.py
           sed -i -e "s:#            XFYUN:            XFYUN:g" main.py
           sed -i -e "s:#            return xfyunAPI.asr:            return xfyunAPI.asr:g" main.py
           cat main.py
@@ -45,7 +46,7 @@ jobs:
           
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
           sed -i -e "s:import xfyunAPI:# import xfyunAPI:g" main.py
-          sed -i -e $'s/         elif ASR_CHOICE == \'XFYUN\'/#         elif ASR_CHOICE == \'XFYUN\'/g' main.py
+          sed -i -e "s:         elif ASR_CHOICE == $quotXFYUN$quot:#         elif ASR_CHOICE == $quotXFYUN$quot:g" main.py
           sed -i -e "s:            XFYUN:#            XFYUN:g" main.py
           sed -i -e "s:            return xfyunAPI.asr:#            return xfyunAPI.asr:g" main.py
           
