@@ -101,7 +101,7 @@
  ✅ `Github Action` 可以正常使用</br>
  ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会出现各种依赖冲突问题未解决</br>
  ⚠ `Python Script` 需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10)，和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
-- [x] `IBM API` 每个月有免费额度，但准确度不够，注册需外币卡</br>
+- [x] `IBM API` 和 Google 一样每个月有免费额度，但准确度不够，注册需外币卡</br>
 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就那么一点额度，额度或许已经没了🤷‍♂️</br>
 `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
 `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
