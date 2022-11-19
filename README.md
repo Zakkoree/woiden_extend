@@ -25,7 +25,7 @@
 <kbd>**可选参数**</kbd> 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 两种选一种,关联下面三组参数
+<kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` 三选一
 > `ASR_CHOICE: BAIDU 、 XF 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
