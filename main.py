@@ -368,22 +368,22 @@ def audioToText(audioFile):
         logger.error("ASR_CHOICE is not set, skip ASR")
             
     try:
-        if ASR_CHOICE == "BAIDU":
+        if ASR_CHOICE == 'BAIDU"':
             APP_ID = os.environ['APP_ID']
             API_KEY = os.environ['API_KEY']
             SECRET_KEY = os.environ['SECRET_KEY']
             return baiduAPI(APP_ID, API_KEY, SECRET_KEY, mp3_change_pcm(audioFile))
 
-        elif ASR_CHOICE == "IBM":
+        elif ASR_CHOICE == 'IBM':
             IBM_URL = os.environ['IBM_URL']
             IBM_KEY = os.environ['API_KEY']
             return ibmAPI.asr(IBM_KEY, IBM_URL, audioFile)
 
-#         elif ASR_CHOICE == "XF":
-#             APP_ID = os.environ['APP_ID']
-#             API_KEY = os.environ['API_KEY']
-#             SECRET_KEY = os.environ['SECRET_KEY']
-#             return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
+#        elif ASR_CHOICE == 'XF':
+#            APP_ID = os.environ['APP_ID']
+#            API_KEY = os.environ['API_KEY']
+#            SECRET_KEY = os.environ['SECRET_KEY']
+#            return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
             return None
