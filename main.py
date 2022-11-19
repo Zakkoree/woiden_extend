@@ -379,11 +379,11 @@ def audioToText(audioFile):
             IBM_KEY = os.environ['API_KEY']
             return ibmAPI.asr(IBM_KEY, IBM_URL, audioFile)
 
-#        elif ASR_CHOICE == 'XF':
-#            APP_ID = os.environ['APP_ID']
-#            API_KEY = os.environ['API_KEY']
-#            SECRET_KEY = os.environ['SECRET_KEY']
-#            return xfyunAPI.asr(APPID=APP_ID, APISecret=SECRET_KEY, APIKey=API_KEY, AudioFile=mp3_change_pcm(audioFile))
+       elif ASR_CHOICE == 'XF':
+           XF_APP_ID = os.environ['APP_ID']
+           XF_API_KEY = os.environ['API_KEY']
+           XF_SECRET_KEY = os.environ['SECRET_KEY']
+           return xfyunAPI.asr(APPID=XF_APP_ID, APISecret=XF_SECRET_KEY, APIKey=XF_API_KEY, AudioFile=mp3_change_pcm(audioFile))
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
             return None
