@@ -1,6 +1,5 @@
 
 # ~~Woiden And Hax Auto Extend~~ (删库跑路) <img align="right" src="https://img.shields.io/badge/2022.11.20-activity-success" />
-<h1 align="center">~~Woiden And Hax Auto Extend~~ (删库跑路)</h1>
 
 **woiden.id 和 hax.co.id 自动续订** 
 
