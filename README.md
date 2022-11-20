@@ -81,15 +81,15 @@
 </details>
 
 - **Github Action With 自己服务器**</br>
- `把你自己的服务器托管到 Github Action 中` [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
+    - 把你自己的服务器托管到 `Github Action` 中 [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - **Python Script**</br>
- `configuration env ...`</br>
- `pip3 install --no-cache-dir -r requirements.txt`</br>
- `python3 main.py`
+    - `configuration env ...`</br>
+    - `pip3 install --no-cache-dir -r requirements.txt`</br>
+    - `python3 main.py`
 - **Docker**</br>
- `docker run -e USERNAME=xxx -e PASSWORD=xxx [可选参数] -it --rm  zakkoree/woiden_extend`
+    - `docker run -e USERNAME=xxx -e PASSWORD=xxx [可选参数] -it --rm  zakkoree/woiden_extend`
 - 自己服务器 + Crontab</br>
-`直接使用 Python Scrip 脚本或 Docker Image，把运行命令添加到 crontab 里面`
+    - 直接使用 `Python Scrip` 脚本或 `Docker Image`，把运行命令添加到 `crontab` 里面
 
 ## 集成
 <kbd>**语音识别**</kbd>
