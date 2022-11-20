@@ -104,7 +104,7 @@
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
 - [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
-- [ ] ~~`Google API`~~ 要挂代理访问，需付费，注册需外币卡
+- [ ] ~~`Google API`~~ 国内要挂代理访问，需付费，注册需外币卡
 
 <kbd>**图片识别**</kbd>
 - [x] `2Captcha API` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
