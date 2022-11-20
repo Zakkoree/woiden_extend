@@ -113,6 +113,6 @@
 
 ---
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用<br>
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用可以删除<br>
 
 
