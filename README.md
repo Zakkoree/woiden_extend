@@ -30,14 +30,14 @@
 > - 百度 API需要的参数</br>
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
->     -`SECRET_KEY: 百度语音API的SECRET_KEY`</br>
+>     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
 > - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细➡](#001) )</br>
->     -`APP_ID: 讯飞语音API的APP_ID`</br>
->     -`API_KEY: 讯飞语音API的API_KEY`</br>
->     -`SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
+>     - `APP_ID: 讯飞语音API的APP_ID`</br>
+>     - `API_KEY: 讯飞语音API的API_KEY`</br>
+>     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
 > - IBM API需要的参数</br>
->     -`APP_ID: IBM API的IDkey`</br>
->     -`IBM_URL: IBM API的URL`</br>
+>     - `APP_ID: IBM API的IDkey`</br>
+>     - `IBM_URL: IBM API的URL`</br>
 
 ## 使用
 
