@@ -80,7 +80,10 @@
 #
 </details>
 
-- github action with 自己服务器
+- Github Action With 自己服务器
+```
+ 把你自己的服务器托管到 `Github Action` 中 [参考](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
+```
 - Python Script
 ```
  configuration env ...
