@@ -42,9 +42,9 @@
 ## 使用
 
 - **Github Action**
-    1 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
-    2 将参数添加到Secret，执行续订任务
-    3. 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率<br>
+  1. 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
+  2. 将参数添加到Secret，执行续订任务
+  3. 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率<br>
     可调整为 `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，降低解码平台费用
 - **Github Action With 自己服务器**
     - 把你自己的服务器托管到 `Github Action` 中 [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
