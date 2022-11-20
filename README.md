@@ -60,7 +60,7 @@
 <details>
  <summary><kbd>GitHub Actions 计划任务语法</kbd></summary>
     
-#
+---
     
 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
 <kbd>时区为UTC</kbd></br>
@@ -88,7 +88,7 @@
 
 **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
 
-#
+***
 
 </details>
 
@@ -111,7 +111,7 @@
 - [x] `2Captcha API` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
 - [ ] ~~`Yes Captcha API`~~ 100次/1¥，新用户免费1500次
 
-#
+---
 
 HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用<br>
 
