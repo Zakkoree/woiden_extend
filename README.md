@@ -43,7 +43,7 @@
 
 
 - Github Action
-> 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内都行，不能是今日日期，不然今天不会执行脚本，之后就会自动更新了</br>
+> 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后就会自动更新</br>
 > 将参数添加到Secret，执行续订任务</br>
 > 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率</br>
 > 可调整为 `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，降低解码平台费用
