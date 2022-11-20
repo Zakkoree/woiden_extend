@@ -26,7 +26,7 @@
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` ，三选一
-> `ASR_CHOICE: BAIDU 、 XF 或 IBM`
+> `ASR_CHOICE: BAIDU 、 XFYUN 或 IBM`
 > - 百度 API需要的参数</br>
 >> `APP_ID: 百度语音API的APP_ID`</br>
 >> `API_KEY: 百度语音API的API_KEY`</br>
