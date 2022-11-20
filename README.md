@@ -80,6 +80,7 @@
 #
 </details>
 
+- github action with 自己服务器
 - Python Script
 ```
  configuration env ...
@@ -92,7 +93,7 @@
 ```
 - 自己服务器 + Crontab
 ```
- 将代码拉下来，构建docker镜像或者直接使用python脚本，把命令添加到crontab里面
+ 构建docker镜像或者直接使用python脚本，把运行命令添加到 `crontab` 里面
 ```
 
 ## 集成
