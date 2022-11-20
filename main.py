@@ -399,7 +399,6 @@ def baiduAPI(APP_ID, API_KEY, SECRET_KEY, audioFile):
     logger.info("udio verify code:" + str(jsonResult))
     return result
 
-# google大概率不会让你用音频，只能用图片
 def twoCaptcha(page):
     openLoginUrl(page)
     try:
@@ -479,5 +478,9 @@ def numCAPTCHA(page):
 
 
 if __name__ == '__main__':
+    try:
+        origin_host = os.environ['HOST']
+    except:
+        pass
     with sync_playwright() as playwright:
         main(playwright)
