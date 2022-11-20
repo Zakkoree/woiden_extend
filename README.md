@@ -43,7 +43,7 @@
 
 <details>
  <summary><kbd>GitHub Actions 计划任务语法</kbd></summary>
-- - -
+#
 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
 <kbd>时区为UTC</kbd></br>
 
@@ -69,7 +69,7 @@
 | `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |
 
 **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
-- - -
+#
 </details>
 
 - **Github Action**
