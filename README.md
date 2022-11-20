@@ -40,11 +40,10 @@
 >> `IBM_URL: IBM API的URL`</br>
 
 ## 使用
+
 <details>
  <summary><kbd>GitHub Actions 计划任务语法</kbd></summary>
- 
-#
- 
+- - -
 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
 <kbd>时区为UTC</kbd></br>
 
@@ -70,8 +69,9 @@
 | `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |
 
 **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
-#
+- - -
 </details>
+
 - **Github Action**
     - 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
     - 将参数添加到Secret，执行续订任务
