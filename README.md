@@ -19,11 +19,11 @@
 > `PASSWORD: 密码`</br>
 
 <kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
-> `TELE_ID: Telegram账户ID`</br>
-> `TELE_TOKEN: Telegrambot机器人Token`</br>
+> `TELE_ID: 账户ID`</br>
+> `TELE_TOKEN: 机器人Token`</br>
 
 <kbd>**可选参数**</kbd> 2Captcha 图片验证和V3验证
-> `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
+> `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证API，支持 `百度` `讯飞` `IBM` ，三选一
 > `ASR_CHOICE: BAIDU 、 XFYUN 或 IBM`
