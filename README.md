@@ -19,7 +19,7 @@
 <kbd>**可选参数**</kbd> 默认 woiden.id
 > `HOST: woiden.id 或 hax.co.id`</br>
 
-<kbd>**必须参数**</kbd> 用户信息
+<kbd>**必要参数**</kbd> 用户信息
 > `USERNAME: 用户名`</br>
 > `PASSWORD: 密码`
 
