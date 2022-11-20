@@ -111,7 +111,6 @@
 - [ ] ~~`Yes Captcha API`~~ 100次/1¥，新用户免费1500次
 
 #
-<p align="right">本项目为学习Python</p>
 
 HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用<br>
 
