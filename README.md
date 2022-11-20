@@ -30,17 +30,17 @@
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，三选一
-> - 百度 API需要的参数</br>
+> - 百度</br>
 >     - `ASR_CHOICE: BAIDU`
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
+> - 讯飞 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
 >     - `ASR_CHOICE: XFYUN`
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
 >     - `API_KEY: 讯飞语音API的API_KEY`</br>
 >     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
-> - IBM API需要的参数</br>
+> - IBM</br>
 >     - `ASR_CHOICE: IBM`
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
