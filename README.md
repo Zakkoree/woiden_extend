@@ -22,7 +22,7 @@
 > `TELE_ID: 账户ID`</br>
 > `TELE_TOKEN: 机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 图片、V3验证支持2Captcha
+<kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，三选一
