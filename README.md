@@ -31,7 +31,7 @@
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细➡](#001) )</br>
+> - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
 >     - `API_KEY: 讯飞语音API的API_KEY`</br>
 >     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
@@ -47,7 +47,7 @@
     - 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以通过修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 文件的第 6 行来调整频率
     - 可调整为 `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，降低解码平台费用
 - **Github Action With 自己服务器**
-    - 把你自己的服务器托管到 `Github Action` 中 [参考↩](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
+    - 把你自己的服务器托管到 `Github Action` 中 [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - **Python Script**
     - `configuration env ...`
     - `pip3 install --no-cache-dir -r requirements.txt`
