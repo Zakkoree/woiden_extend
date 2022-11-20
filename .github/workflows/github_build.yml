@@ -1,4 +1,4 @@
-name: docker build1
+name: github build
 
 on:
   # Allows you to run this workflow manually from the Actions tab
