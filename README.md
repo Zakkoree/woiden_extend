@@ -32,7 +32,7 @@
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
 
-> - 讯飞 API需要的参数 >  **Warning**( Docker不能使用讯飞 [详细⤵](#001) )</br>
+> - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
 >     - `API_KEY: 讯飞语音API的API_KEY`</br>
 >     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
@@ -93,6 +93,8 @@
 ***
 
 </details>
+
+>  **Warning**
 
 ## 集成
 <kbd>**语音识别**</kbd>
