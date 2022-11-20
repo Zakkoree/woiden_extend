@@ -112,4 +112,6 @@
 
 #
 
-HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用
+HaxExtend文件是参考 https://github.com/lyj0309/HaxExtend 项目，在其基础上修改的，已弃用<br>
+
+<p align="right">本项目为学习Python实验项目</p>
