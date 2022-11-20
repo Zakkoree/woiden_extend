@@ -54,7 +54,7 @@
     - `python3 main.py`
 - **Docker**</br>
     - `docker run -e USERNAME=xxx -e PASSWORD=xxx [可选参数] -it --rm  zakkoree/woiden_extend`
-- 自己服务器 + Crontab<
+- 自己服务器 + Crontab
     - 直接使用 `Python Scrip` 脚本或 `Docker Image`，把运行命令添加到 `crontab` 里面
 
 <details>
