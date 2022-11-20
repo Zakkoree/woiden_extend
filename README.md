@@ -13,8 +13,6 @@
 > 4. `Google reCaptcha v3` 续订时评分验证，代码有写v3验证方法，加与不加感觉没有区别，还没弄明白这个方法到底有没有用还是我没找到入口呢，现在是忽略v3验证，正常情况成功率基本100%就没管v3了，懂的朋友可以研究下
 > 5. 只配置了 `woiden.id` 续订，`hax.co.id` 的续订没有配置，两个没什么差别，看着改应该问题不大吧
 
-[#58](https://github.com/anuraghazra/github-readme-stats/pull/58)
-
 ## 参数
 <kbd>**必须参数**</kbd> woiden.id 或 hax.co.id
 > `USERNAME: 用户名`</br>
@@ -34,6 +32,7 @@
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
 > - 讯飞 API需要的参数 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
+
 > **Warning**
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
 >     - `API_KEY: 讯飞语音API的API_KEY`</br>
