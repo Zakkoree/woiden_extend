@@ -30,7 +30,6 @@
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，三选一
-> `ASR_CHOICE: BAIDU 、 XFYUN 或 IBM`
 > - 百度 API需要的参数</br>
 >     - `ASR_CHOICE: BAIDU`
 >     - `APP_ID: 百度语音API的APP_ID`</br>
