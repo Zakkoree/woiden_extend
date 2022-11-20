@@ -28,5 +28,10 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/zakkoree/hax_extend:latest
-          tags: ghcr.io/zakkoree/hax_extend:1.0
+          tags: ghcr.io/zakkoree/woinden_extend:latest
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ghcr.io/zakkoree/woinden_extend:1.0
