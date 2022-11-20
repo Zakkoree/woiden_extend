@@ -1,7 +1,0 @@
-requests>=2.27.1
-selenium>=4.1.5
-2captcha-python>=1.1.2
-baidu-aip
-ffmpy3
-chardet
-bs4
