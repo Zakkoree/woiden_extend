@@ -1,7 +1,7 @@
 
 # Woiden And Hax Auto Extend <img align="right" src="https://img.shields.io/badge/2022.11.20-activity-success" />
 
-**woiden.id 和 hax.co.id 自动续订** 
+**woiden.id 和 hax.co.id 自动续订** [^]
 
 `woiden.id` 和 `hax.co.id` 自动续订只需运行一次就可以成功续订，成功率基本💯</br>
 `Github Action` 默认每天执行3次任务，每天只要成功续订一次后面任务就会跳过，不增加解码平台多余费用</br>
