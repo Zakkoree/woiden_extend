@@ -101,22 +101,22 @@
 
 ## 集成
 <kbd>**语音识别**</kbd>
-- [x] `BaiDu API` 新用户 30000 次一年期限免费音频
-- [x] `Xfyun API` 每月 500 次免费音频流</br><a id='001' />
+- [x] `BaiDu` 新用户 30000 次一年期限免费音频
+- [x] `Xfyun` 每月 500 次免费音频流</br><a id='001' />
     - ✅ `Github Action` 正常使用</br>
     - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包，未解决</br>
     - ⚠ `Python Script` 直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [382~386行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L382-L386) 的注释
-- [x] `IBM API` 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
+- [x] `IBM` 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
     - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就这么 500 分钟，或许已经没时间了🤷‍♂️</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
-- [ ] ~~`Aliyun API`~~ 新用户三个月免费音频
-- [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
-- [ ] ~~`Google API`~~ 国内要挂代理访问，需付费，注册需外币卡
+- [ ] ~~`Aliyun`~~ 新用户三个月免费音频
+- [ ] ~~`Azure`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
+- [ ] ~~`Google`~~ 国内要挂代理访问，需付费，注册需外币卡
 
 <kbd>**图片识别**</kbd>
-- [x] `2Captcha API` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
-- [ ] ~~`Yes Captcha API`~~ 100次/1¥，新用户免费1500次
+- [x] `2Captcha` 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
+- [ ] ~~`Yes Captcha`~~ 100次/1¥，新用户免费1500次
 
 ---
 
