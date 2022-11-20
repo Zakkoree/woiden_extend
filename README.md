@@ -15,7 +15,7 @@
 
 ## 参数
 <kbd>**必须参数**</kbd>
-> `USERNAME:用户名`</br>
+> `USERNAME: 用户名`</br>
 > `PASSWORD: 密码`</br>
 
 <kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
