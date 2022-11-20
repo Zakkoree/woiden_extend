@@ -14,7 +14,7 @@
 > 5. 只配置了 `woiden.id` 续订，`hax.co.id` 的续订没有配置，两个没什么差别，看着改应该问题不大吧
 
 ## 参数
-<kbd>**必须参数**</kbd>
+<kbd>**必须参数**</kbd> woiden.id 或 hax.co.id
 > `USERNAME: 用户名`</br>
 > `PASSWORD: 密码`</br>
 
