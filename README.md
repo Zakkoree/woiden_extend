@@ -15,12 +15,12 @@
 
 ## 参数
 <kbd>**必须参数**</kbd>
-> `USERNAME: Woiden或Hax的用户名`</br>
-> `PASSWORD: Woiden或Hax的密码`</br>
+> `USERNAME:用户名`</br>
+> `PASSWORD: 密码`</br>
 
 <kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
-> `TELE_ID: telegram用户ID`</br>
-> `TELE_TOKEN: telegrambot_token机器人Token`</br>
+> `TELE_ID: Telegram账户ID`</br>
+> `TELE_TOKEN: Telegrambot机器人Token`</br>
 
 <kbd>**可选参数**</kbd> 2Captcha 图片验证和V3验证
 > `TWOCAPTCHA_TOKEN: 2Captcha的Token`</br>
