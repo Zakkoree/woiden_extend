@@ -82,10 +82,10 @@
 
 - Github Action With 自己服务器</br>
  `把你自己的服务器托管到 Github Action 中` [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
-- Python Script
- `configuration env ...</br>
- pip install --no-cache-dir -r requirements.txt</br>
- python3 main.py`
+- Python Script</br>
+ `configuration env ...`</br>
+ `pip install --no-cache-dir -r requirements.txt`</br>
+ `python3 main.py`
 - Docker
 ```
  docker run -e USERNAME=xxx -e PASSWORD=xxx [可选参数] -it --rm  zakkoree/woiden_extend
