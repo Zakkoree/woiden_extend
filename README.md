@@ -94,7 +94,7 @@
 
 ## 集成
 <kbd>**语音识别**</kbd>
-- [x] `BaiDu API` 新用户免费一年30000次
+- [x] `BaiDu API` 新用户首年 30000 次免费音频
 - [x] `Xfyun API` 每个月 500 次免费音频流</br><a id='001' />
     - ✅ `Github Action` 正常</br>
     - ❎ `Docker Build` 镜像不含讯飞语音识别，因为加讯飞构建会出现各种依赖冲突和需要的系统软件包，未解决</br>
@@ -103,7 +103,7 @@
     - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就这么 500 分钟，或许已经没时间了🤷‍♂️</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
-- [ ] ~~`Aliyun API`~~ 免费三个月
+- [ ] ~~`Aliyun API`~~ 三个月免费音频
 - [ ] ~~`Azure API`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
 - [ ] ~~`Google API`~~ 国内要挂代理访问，需付费，注册需外币卡
 
