@@ -371,7 +371,6 @@ def mp3_change_pcm(audioFile):
     ff.run()
     return outpath
 
-
 def audioToText(audioFile):
     ASR_CHOICE = None
     try:
@@ -379,11 +378,11 @@ def audioToText(audioFile):
     except:
         logger.error("ASR_CHOICE is not set, skip ASR")
             
-#    try:
-#        if ASR_CHOICE == 'BAIDU':
-#            APP_ID = os.environ['APP_ID']
-#            API_KEY = os.environ['API_KEY']
-#            SECRET_KEY = os.environ['SECRET_KEY']
+    try:
+        if ASR_CHOICE == 'BAIDU':
+            APP_ID = os.environ['APP_ID']
+            API_KEY = os.environ['API_KEY']
+            SECRET_KEY = os.environ['SECRET_KEY']
             return baiduAPI(APP_ID, API_KEY, SECRET_KEY, mp3_change_pcm(audioFile))
 
         elif ASR_CHOICE == 'IBM':
