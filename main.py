@@ -188,7 +188,7 @@ def checkInfo(page):
             logger.error("Your VPS is terminated, Please create a new one")
             teleinfomsg = '''Renew Fail ‼
             
-            Your VPS is terminated, Please create a new one
+        Your VPS is terminated, Please create a new one
             '''
             send(teleinfomsg)
             sys.exit()
