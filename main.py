@@ -53,6 +53,7 @@ additional_information = '''@Zakkoree 有问题到 https://github.com/Zakkoree/w
 logger = Logger(LoggerName="Extend")
 
 message = None
+
 def delay():
     time.sleep(random.randint(2, 5))
     
@@ -157,11 +158,14 @@ def run(page):
             file.read()
             teleinfomsg = '''Renew Fail ‼
             
-        Last Renew Time {0}
-        '''.format(lastTime)
+        {0}
+        Last Renew Time {1}
+        '''.format(message, lastTime)
             send(teleinfomsg)
         else:
-            teleinfomsg = "Renew Fail ‼"
+            teleinfomsg = '''Renew Fail ‼
+        {0}
+        '''.format(message)
             send(teleinfomsg)
             
 def adsClear(page):
@@ -196,7 +200,6 @@ def checkInfo(page):
         '''
         send(teleinfomsg)
         sys.exit()
-
 
 openLoginNum = 0
 def openLoginUrl(page):
@@ -294,14 +297,11 @@ def extend(page, tokenCode):
     logger.info("click Extend VPS")
     page.goto('https://' + origin_host + renew_path)
     adsClear(page)
-    
-
     if tokenCode != None:
         javacsript = """$("button[name='submit_button']").unbind('click').click(function(){$('#form-submit').prepend('<input type="hidden" name="token" value="{token}">');$('#form-submit').prepend('<input type="hidden" name="action" value="renew_vps">');$("html, body").animate({scrollTop:300},"slow");$("#response").html('<div class="progress" id="progress"><div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">Loading.....</span></div></div>'),$(".progress-bar").animate({ width:"25%"}),$(".progress-bar").animate({width:"55%"}),$.ajax({ type:"POST",url:"/renew-vps-process/",data: $("form.submit").serialize(),success:function (a) {$(".progress-bar").animate({ width:"70%"}),$(".progress-bar").animate({width:"100%"}),$("#response").html(a),$("#form-submit").hide(1000)},error:function(){alert("Something wrong !")}})})""".replace("{token}",  tokenCode)
         page.evaluate(javacsript)
     else:
         logger.info("recaptchaV3 token is none")
-
     # input web address
     logger.info("fill web address")
     page.locator("input[id=\"web_address\"]").fill(origin_host)
