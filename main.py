@@ -125,14 +125,14 @@ def run(page):
         loginRetry(page)
         sys.exit()
     try:
-        page.locator('//div[@class="alert alert-danger" and text()="Invalid Username / Password !"]').hover(1000)
+        page.locator('//div[@class="alert alert-danger" and text()="Invalid Username / Password !"]').hover(timeout=3000)
     except:
         logger.error("Invalid Username / Password !")
         teleinfomsg = '''Renew Fail !!! 
         Invalid Username / Password !'''
         sys.exit()
     try:
-        page.locator('//div[@class="alert alert-danger" and text()="Please correct your captcha!."]').hover(1000)
+        page.locator('//div[@class="alert alert-danger" and text()="Please correct your captcha!."]').hover(timeout=3000)
     except:
         logger.error("Please correct your captcha!.")
         teleinfomsg = '''Renew Fail !!! 
