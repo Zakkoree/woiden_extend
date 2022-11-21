@@ -67,7 +67,7 @@ jobs:
           
           sed -i -e "s:GITHUB = True:GITHUB = False:g" main.py
           sed -i '22s/^/#/' main.py
-          sed -i '382,386s/^/#/' main.py
+          sed -i '393,397s/^/#/' main.py
           
           a=$(cat renewTime)
           b=${a//-/.}
