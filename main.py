@@ -48,6 +48,8 @@ extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
 
+additional_information = "有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue"
+
 logger = Logger(LoggerName="HaxExtend")
 
 message = None
@@ -55,10 +57,13 @@ def delay():
     time.sleep(random.randint(2, 5))
 
     
-def send(message):
+def send(txt):
     try:
+        sendmessage = '''{0} 自动续订脚本
+        {1}
+{2}'''.format(origin_host, txt, additional_information)
         bot = telepot.Bot(os.environ['TELE_TOKEN'])
-        bot.sendMessage(os.environ['TELE_ID'], message, parse_mode=None, disable_web_page_preview=None, disable_notification=None,
+        bot.sendMessage(os.environ['TELE_ID'], sendmessage, parse_mode=None, disable_web_page_preview=None, disable_notification=None,
                     reply_to_message_id=None, reply_markup=None)
         logger.info("Telebot push")
     except Exception as e:
@@ -119,7 +124,7 @@ def run(page):
         logger.error(e)
         loginRetry(page)
         sys.exit()
-    delay()
+    checkInfo(page)
     # 验证码V3
     tokenCode = recaptchaV3(page)
     # Extend VPS link
@@ -139,12 +144,8 @@ def run(page):
                 logger.error(e)
         logger.info("renew succeed")
         # barkPush('[INFO] renew succeed')
-        teleinfomsg = '''
-        {0} 自动续订脚本
-        Renew Succeed
-        {1}
-        https://github.com/Zakkoree/woiden_extend
-        '''.format(origin_host, message)
+        teleinfomsg = '''Renew Succeed
+        {0}'''.format(message)
         send(teleinfomsg)
     else:
         if GITHUB:
@@ -157,19 +158,11 @@ def run(page):
             logger.error("renew fail")
             # barkPush('[ERROR] renew fail')
             file.read()
-            teleinfomsg = '''
-            {0} 自动续订脚本
-            Renew Fail !!!
-            Last Renew Time {1}
-            有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
-            '''.format(origin_host, lastTime)
+            teleinfomsg = '''Renew Fail !!!
+        Last Renew Time {0}'''.format(lastTime)
             send(teleinfomsg)
         else:
-            teleinfomsg = '''
-            {0} 自动续订脚本
-            Renew Fail !!!
-            有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
-            '''.format(origin_host)
+            teleinfomsg = "Renew Fail !!!"
             send(teleinfomsg)
             
 
@@ -180,6 +173,25 @@ def adsClear(page):
         page.evaluate("$('ins.adsbygoogle').css('display','none');")
     except Exception as e:
         return
+    
+def checkInfo(page):
+    try:
+        page.locator('//div[@class="alert alert-warning"]').hover(3000)
+    except:
+        label = page.locator("//label[@class='col-sm-5 col-form-label' and text()='Status']/following::span[1]")
+        if "ACTIVE" in label.inner_text():
+            return
+        else:
+            logger.error("Your VPS is terminated, Please create a new one")
+            teleinfomsg = "Renew Fail !!!  Your VPS is terminated, Please create a new one"
+            send(teleinfomsg)
+            sys.exit()
+    else:
+        logger.error("You have no VPS yet, Please create a")
+        teleinfomsg = "Renew Fail !!!  You have no VPS yet, Please create a"
+        send(teleinfomsg)
+        sys.exit()
+
 
 openLoginNum = 0
 def openLoginUrl(page):
