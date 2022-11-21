@@ -1,7 +1,7 @@
 
 # Woiden And Hax Auto Extend  <sub><img align="right" src="https://img.shields.io/badge/2022.11.21-activity-success" /></sub>
 
-**woiden.id 和 hax.co.id 自动续订**    成功率基本💯
+**woiden.id 和 hax.co.id 自动续订**    <sup>成功率基本💯</sup>
 
 `activity` 徽章显示最后成功执行的日期，脚本是否稳定运行，`Github` 是 `UTC` 时区会有时差，一天误差属于正常
 
@@ -31,7 +31,6 @@
 ---
     
 计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。</br>
-<kbd>时区为UTC</kbd></br>
 
 ```plain
 ┌───────────── 分钟 (0 - 59)
