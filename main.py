@@ -227,6 +227,10 @@ def loginRetry(page):
     global authRetry
     if authRetry >= loginRetryNum + 1:
         logger.error("login fail!")
+        teleinfomsg = '''Login Fail !!!
+        Invalid Username / Password Or Validation of invalid !.'''
+        send(teleinfomsg)
+        sys.exit()
     else:
         authRetry += 1
         logger.warn("You have to log in!")
