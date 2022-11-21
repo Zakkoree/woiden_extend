@@ -50,7 +50,7 @@ intervalTime = 10
 
 additional_information = "有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue"
 
-logger = Logger(LoggerName="HaxExtend")
+logger = Logger(LoggerName="Extend")
 
 message = None
 def delay():
