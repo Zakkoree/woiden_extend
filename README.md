@@ -1,9 +1,8 @@
 
 # Woiden And Hax Auto Extend  <sub><img align="right" src="https://img.shields.io/badge/2022.11.21-activity-success" /></sub>
 
-**woiden.id 和 hax.co.id 自动续订**成功率基本💯
+**woiden.id 和 hax.co.id 自动续订**    成功率基本💯
 
-</br>
 `Github Action` 默认每天执行3次任务，每天只要成功续订一次后面任务就会跳过，不增加解码平台多余费用</br>
 `activity` 徽章显示最后成功执行的日期，脚本是否稳定运行，由于 `Github` 是 `UTC` 时区会有时差，一天误差属于正常
 
