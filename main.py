@@ -48,20 +48,21 @@ extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
 
-additional_information = "有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue"
+additional_information = '''
+有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
+@Zakkoree
+'''
 
 logger = Logger(LoggerName="Extend")
 
 message = None
 def delay():
     time.sleep(random.randint(2, 5))
-
     
 def send(txt):
     try:
-        sendmessage = '''{0} 自动续订脚本
-        {1}
-{2}'''.format(origin_host, txt, additional_information)
+        sendmessage = '''{0} 自动续订脚本  {1}
+        {2}'''.format(origin_host, txt, additional_information)
         bot = telepot.Bot(os.environ['TELE_TOKEN'])
         bot.sendMessage(os.environ['TELE_ID'], sendmessage, parse_mode=None, disable_web_page_preview=None, disable_notification=None,
                     reply_to_message_id=None, reply_markup=None)
@@ -86,7 +87,6 @@ def barkPush(body):
     except:
         return
 
-    
 
 def main(playwright: Playwright) -> None:
     # browser = playwright.chromium.launch(channel="chrome", headless=False)
@@ -145,7 +145,7 @@ def run(page):
                 logger.error(e)
         logger.info("renew succeed")
         # barkPush('[INFO] renew succeed')
-        teleinfomsg = '''Renew Succeed
+        teleinfomsg = '''Renew Succeed👌
         {0}'''.format(message)
         send(teleinfomsg)
     else:
@@ -159,11 +159,11 @@ def run(page):
             logger.error("renew fail")
             # barkPush('[ERROR] renew fail')
             file.read()
-            teleinfomsg = '''Renew Fail !!!
+            teleinfomsg = '''Renew Fail ‼
         Last Renew Time {0}'''.format(lastTime)
             send(teleinfomsg)
         else:
-            teleinfomsg = "Renew Fail !!!"
+            teleinfomsg = "Renew Fail ‼"
             send(teleinfomsg)
             
 
@@ -186,13 +186,13 @@ def checkInfo(page):
             return
         else:
             logger.error("Your VPS is terminated, Please create a new one")
-            teleinfomsg = '''Renew Fail !!!  
+            teleinfomsg = '''Renew Fail ‼  
             Your VPS is terminated, Please create a new one'''
             send(teleinfomsg)
             sys.exit()
     else:
         logger.error("You have no VPS yet, Please create a")
-        teleinfomsg = '''Renew Fail !!!  
+        teleinfomsg = '''Renew Fail ‼  
         You have no VPS yet, Please create a'''
         send(teleinfomsg)
         sys.exit()
@@ -227,8 +227,8 @@ def loginRetry(page):
     global authRetry
     if authRetry >= loginRetryNum:
         logger.error("longin failed!")
-        teleinfomsg = '''Longin Failed !!!
-        Invalid Username / Password Or Validation of invalid !.'''
+        teleinfomsg = '''Longin Failed ‼
+        Invalid Username / Password Or Validation of invalid ⁉'''
         send(teleinfomsg)
         sys.exit()
     else:
