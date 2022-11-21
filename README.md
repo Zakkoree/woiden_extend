@@ -49,7 +49,7 @@
 
 - **Github Action**
   - 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
-  - 将 [参数](#01) 添加到Secret，执行续订任务
+  - 将 [参数](#01) 添加到Secret，执行 '续订' 任务
   - 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 第 6 行来调整频率，
     `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，每天只要成功续订一次后面任务就会跳过避免消耗解码平台多余额度
 - **Github Action With 自己服务器**
