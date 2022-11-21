@@ -91,7 +91,7 @@
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
 
->  **Warning** **语音参数或图片参数至少有一项，建议语音图片两个同时使用**
+>  **Warning** **至少有一项语音或者图片参数，建议语音图片两个同时使用**
 
 ## 集成
 <kbd>**语音识别**</kbd>
