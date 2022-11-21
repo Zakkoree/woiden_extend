@@ -118,28 +118,13 @@ def run(page):
     # login
     try:
         logger.info("click login")
-        with page.expect_response(re.compile(r"(/#)|(" + info_path + ")|(" + login_path + ")"), timeout=timeout*2) as result:
+        with page.expect_response(re.compile(r"(/#)|(" + info_path + ")"), timeout=timeout*2) as result:
             page.get_by_role("button", name="Submit").click()
     except Exception as e:
         logger.error(e)
         loginRetry(page)
         sys.exit()
-    try:
-        page.locator('//div[@class="alert alert-danger" and text()="Invalid Username / Password !"]').hover(timeout=3000)
-    except:
-        logger.error("Invalid Username / Password !")
-        teleinfomsg = '''Renew Fail !!! 
-        Invalid Username / Password !'''
-        sys.exit()
-    try:
-        page.locator('//div[@class="alert alert-danger" and text()="Please correct your captcha!."]').hover(timeout=3000)
-    except:
-        logger.error("Please correct your captcha!.")
-        teleinfomsg = '''Renew Fail !!! 
-        Unfilled verification!.'''
-        send(teleinfomsg)
-        sys.exit()
-    
+        
     checkInfo(page)
     # 验证码V3
     tokenCode = recaptchaV3(page)
@@ -194,19 +179,21 @@ def checkInfo(page):
     logger.info("load " + origin_host + "info")
     try:
         page.goto('https://' + origin_host + info_path)
-        page.locator('//div[@class="alert alert-warning"]').hover(3000)
+        page.locator('//div[@class="alert alert-warning"]').hover(timeout=3000)
     except:
         label = page.locator("//label[@class='col-sm-5 col-form-label' and text()='Status']/following::span[1]")
         if "ACTIVE" in label.inner_text():
             return
         else:
             logger.error("Your VPS is terminated, Please create a new one")
-            teleinfomsg = "Renew Fail !!!  Your VPS is terminated, Please create a new one"
+            teleinfomsg = '''Renew Fail !!!  
+            Your VPS is terminated, Please create a new one'''
             send(teleinfomsg)
             sys.exit()
     else:
         logger.error("You have no VPS yet, Please create a")
-        teleinfomsg = "Renew Fail !!!  You have no VPS yet, Please create a"
+        teleinfomsg = '''Renew Fail !!!  
+        You have no VPS yet, Please create a'''
         send(teleinfomsg)
         sys.exit()
 
@@ -246,7 +233,7 @@ def loginRetry(page):
         logger.info("try login " + str(authRetry))
         run(page)
 
-# 目前没找到recaptchaV3入口  懂得可以试试  
+# 懂得可以试试  
 def recaptchaV3(page):
     return None
     logger.info("verify recaptcha v3")
@@ -322,6 +309,7 @@ def extend(page, tokenCode):
     # agreement check
     logger.info("click agreement")
     page.click(".form-check-input")
+
     delay()
     logger.info("click Renew VPS")
 
@@ -351,6 +339,7 @@ def extend(page, tokenCode):
         loginRetry(page)
         sys.exit()
     
+
     extendState = "failed" in body
 
     # 续订固定重试次数
@@ -390,11 +379,11 @@ def mp3_change_pcm(audioFile):
 def audioToText(audioFile):
     ASR_CHOICE = None
     try:
-#        ASR_CHOICE = os.environ['ASR_CHOICE']
-#    except:
-#        logger.error("ASR_CHOICE is not set, skip ASR")
-#        return None
-#    try:
+        ASR_CHOICE = os.environ['ASR_CHOICE']
+    except:
+        logger.error("ASR_CHOICE is not set, skip ASR")
+        return None
+    try:
         if ASR_CHOICE == 'BAIDU':
             APP_ID = os.environ['APP_ID']
             API_KEY = os.environ['API_KEY']
@@ -406,11 +395,11 @@ def audioToText(audioFile):
             IBM_KEY = os.environ['API_KEY']
             return ibmAPI.asr(IBM_KEY, IBM_URL, audioFile)
 
-        elif ASR_CHOICE == 'XFYUN':
-            XFYUN_APP_ID = os.environ['APP_ID']
-            XFYUN_API_KEY = os.environ['API_KEY']
-            XFYUN_SECRET_KEY = os.environ['SECRET_KEY']
-            return xfyunAPI.asr(APPID=XFYUN_APP_ID, APISecret=XFYUN_SECRET_KEY, APIKey=XFYUN_API_KEY, AudioFile=mp3_change_pcm(audioFile))
+#        elif ASR_CHOICE == 'XFYUN':
+#            XFYUN_APP_ID = os.environ['APP_ID']
+#            XFYUN_API_KEY = os.environ['API_KEY']
+#            XFYUN_SECRET_KEY = os.environ['SECRET_KEY']
+#            return xfyunAPI.asr(APPID=XFYUN_APP_ID, APISecret=XFYUN_SECRET_KEY, APIKey=XFYUN_API_KEY, AudioFile=mp3_change_pcm(audioFile))
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
             return None
