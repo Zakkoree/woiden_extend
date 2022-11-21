@@ -61,7 +61,7 @@ jobs:
         run: |
           sed -i -e "s:GITHUB = False:GITHUB = True:g" main.py
           sed -i '22s/^#//' main.py
-          sed -i '382,386s/^#//' main.py
+          sed -i '393,397s/^#//' main.py
           
           python3 main.py
           
