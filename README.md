@@ -45,7 +45,7 @@
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
 
->  **Warning** **语音参数或图片参数必须有一项，建议语音图片两个同时**
+>  **Warning** **语音参数或图片参数必须有一项，建议语音图片两个同时使用**
 ## 使用
 
 - **Github Action**
