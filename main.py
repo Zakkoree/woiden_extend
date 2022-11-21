@@ -306,7 +306,6 @@ def extend(page, tokenCode):
     # agreement check
     logger.info("click agreement")
     page.click(".form-check-input")
-
     delay()
     logger.info("click Renew VPS")
 
