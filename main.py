@@ -390,11 +390,11 @@ def mp3_change_pcm(audioFile):
 def audioToText(audioFile):
     ASR_CHOICE = None
     try:
-#        ASR_CHOICE = os.environ['ASR_CHOICE']
-#    except:
-#        logger.error("ASR_CHOICE is not set, skip ASR")
-#        return None
-#    try:
+##        ASR_CHOICE = os.environ['ASR_CHOICE']
+##    except:
+##        logger.error("ASR_CHOICE is not set, skip ASR")
+##        return None
+##    try:
         if ASR_CHOICE == 'BAIDU':
             APP_ID = os.environ['APP_ID']
             API_KEY = os.environ['API_KEY']
