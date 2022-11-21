@@ -336,7 +336,6 @@ def extend(page, tokenCode):
         loginRetry(page)
         sys.exit()
     
-
     extendState = "failed" in body
 
     # 续订固定重试次数
