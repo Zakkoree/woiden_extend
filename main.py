@@ -49,8 +49,9 @@ extendRetryNum = 10
 intervalTime = 10
 
 additional_information = '''
-有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
 @Zakkoree
+
+有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
 '''
 
 logger = Logger(LoggerName="Extend")
@@ -61,7 +62,7 @@ def delay():
     
 def send(txt):
     try:
-        sendmessage = '''{0} 自动续订脚本  {1}
+        sendmessage = '''{0} {1}
         {2}'''.format(origin_host, txt, additional_information)
         bot = telepot.Bot(os.environ['TELE_TOKEN'])
         bot.sendMessage(os.environ['TELE_ID'], sendmessage, parse_mode=None, disable_web_page_preview=None, disable_notification=None,
@@ -86,7 +87,6 @@ def barkPush(body):
         requests.post(WXURL, json=data)
     except:
         return
-
 
 def main(playwright: Playwright) -> None:
     # browser = playwright.chromium.launch(channel="chrome", headless=False)
