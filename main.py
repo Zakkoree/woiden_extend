@@ -48,7 +48,7 @@ extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
 
-additional_information = "有问题附上报错信息到 https://github.com/Zakkoree/woiden_extend/issues 发起issue"
+additional_information = "有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue"
 
 logger = Logger(LoggerName="Extend")
 
