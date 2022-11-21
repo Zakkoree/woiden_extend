@@ -20,11 +20,11 @@
 > `HOST: woiden.id 或 hax.co.id`</br>
 
 <kbd>**必要参数**</kbd> 用户信息
-> `USERNAME: 用户名`</br>
+> `USERNAME: Telegram ID`</br>
 > `PASSWORD: 密码`
 
 <kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
-> `TELE_ID: 用户ID`</br>
+> `TELE_ID: Telegram ID`</br>
 > `TELE_TOKEN: 机器人Token`</br>
 
 <kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
