@@ -3,7 +3,6 @@
 
 **woiden.id 和 hax.co.id 自动续订**    成功率基本💯
 
-`Github Action` 默认每天执行3次任务，每天只要成功续订一次后面任务就会跳过，不会增加解码平台多余费用</br>
 `activity` 徽章显示最后成功执行的日期，脚本是否稳定运行，由于 `Github` 是 `UTC` 时区会有时差，一天误差属于正常
 
 > **Note**
@@ -52,7 +51,7 @@
   - 初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
   - 将 [参数](#01) 添加到Secret，执行续订任务
   - 默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 第 6 行来调整频率，
-    `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行
+    `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，每天只要成功续订一次后面任务就会跳过避免消耗解码平台多余额度
 - **Github Action With 自己服务器**
   - 把你自己的服务器托管到 `Github Action` 中 [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - **Python Script**
