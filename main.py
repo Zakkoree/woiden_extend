@@ -377,7 +377,7 @@ def audioToText(audioFile):
         ASR_CHOICE = os.environ['ASR_CHOICE']
     except:
         logger.error("ASR_CHOICE is not set, skip ASR")
-            
+        return None
     try:
         if ASR_CHOICE == 'BAIDU':
             APP_ID = os.environ['APP_ID']
