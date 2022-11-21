@@ -175,7 +175,9 @@ def adsClear(page):
         return
     
 def checkInfo(page):
+    logger.info("load " + origin_host + "info")
     try:
+        page.goto('https://' + origin_host + info_path)
         page.locator('//div[@class="alert alert-warning"]').hover(3000)
     except:
         label = page.locator("//label[@class='col-sm-5 col-form-label' and text()='Status']/following::span[1]")
