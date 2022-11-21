@@ -48,12 +48,8 @@ extendRetryNum = 10
 # 续订重试间隔时间（秒）
 intervalTime = 10
 
-
-
-additional_information = '''
-@Zakkoree 有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue
-'''
-
+additional_information = '''@Zakkoree 有问题到 https://github.com/Zakkoree/woiden_extend/issues 发起issue'''
+ 
 logger = Logger(LoggerName="Extend")
 
 message = None
@@ -109,12 +105,10 @@ def main(playwright: Playwright) -> None:
     context.close()
     browser.close()
 
-
 def run(page):
     if reCAPTCHA(page) == False:
         loginRetry(page)
         sys.exit()
-
     # login
     try:
         logger.info("click login")
@@ -146,7 +140,9 @@ def run(page):
         logger.info("renew succeed")
         # barkPush('[INFO] renew succeed')
         teleinfomsg = '''Renew Succeed👌
-        {0}'''.format(message)
+        
+        {0}
+        '''.format(message)
         send(teleinfomsg)
     else:
         if GITHUB:
@@ -160,14 +156,14 @@ def run(page):
             # barkPush('[ERROR] renew fail')
             file.read()
             teleinfomsg = '''Renew Fail ‼
-        Last Renew Time {0}'''.format(lastTime)
+            
+        Last Renew Time {0}
+        '''.format(lastTime)
             send(teleinfomsg)
         else:
             teleinfomsg = "Renew Fail ‼"
             send(teleinfomsg)
             
-
-
 def adsClear(page):
     logger.info("clear adsbygoogle")
     try:
@@ -186,14 +182,18 @@ def checkInfo(page):
             return
         else:
             logger.error("Your VPS is terminated, Please create a new one")
-            teleinfomsg = '''Renew Fail ‼  
-            Your VPS is terminated, Please create a new one'''
+            teleinfomsg = '''Renew Fail ‼
+            
+            Your VPS is terminated, Please create a new one
+            '''
             send(teleinfomsg)
             sys.exit()
     else:
         logger.error("You have no VPS yet, Please create a")
-        teleinfomsg = '''Renew Fail ‼  
-        You have no VPS yet, Please create a'''
+        teleinfomsg = '''Renew Fail ‼
+        
+        You have no VPS yet, Please create a
+        '''
         send(teleinfomsg)
         sys.exit()
 
