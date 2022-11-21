@@ -118,12 +118,28 @@ def run(page):
     # login
     try:
         logger.info("click login")
-        with page.expect_response(re.compile(r"(/#)|(" + info_path + ")"), timeout=timeout*2) as result:
+        with page.expect_response(re.compile(r"(/#)|(" + info_path + ")|(" + login_path + ")"), timeout=timeout*2) as result:
             page.get_by_role("button", name="Submit").click()
     except Exception as e:
         logger.error(e)
         loginRetry(page)
         sys.exit()
+    try:
+        page.locator('//div[@class="alert alert-danger" and text()="Invalid Username / Password !"]').hover(1000)
+    except:
+        logger.error("Invalid Username / Password !")
+        teleinfomsg = '''Renew Fail !!! 
+        Invalid Username / Password !'''
+        sys.exit()
+    try:
+        page.locator('//div[@class="alert alert-danger" and text()="Please correct your captcha!."]').hover(1000)
+    except:
+        logger.error("Please correct your captcha!.")
+        teleinfomsg = '''Renew Fail !!! 
+        Unfilled verification!.'''
+        send(teleinfomsg)
+        sys.exit()
+    
     checkInfo(page)
     # 验证码V3
     tokenCode = recaptchaV3(page)
