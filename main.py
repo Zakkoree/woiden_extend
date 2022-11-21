@@ -176,7 +176,7 @@ def adsClear(page):
         return
     
 def checkInfo(page):
-    logger.info("load " + origin_host + "info")
+    logger.info(origin_host + "check info")
     try:
         page.goto('https://' + origin_host + info_path)
         page.locator('//div[@class="alert alert-warning"]').hover(timeout=3000)
