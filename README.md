@@ -42,7 +42,7 @@
 **例如：** 
 ```shell
 docker run \
--e HOST=woiden.id \ # 选择
+-e HOST=woiden.id \ # 选择平台
 -e USERNAME=123456 -e PASSWORD=123456 \ # 用户
 -e TELE_ID=123456 -e TELE_TOKEN=123456\ # Telegram 推送
 -e TWOCAPTCHA_TOKEN=123456 \ # 图片和V3验证
