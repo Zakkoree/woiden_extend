@@ -118,7 +118,7 @@ docker run \
     - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
     - ⚠ `Python Script` 直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
 - [x] **`IBM`** 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
-    - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl，不要滥用毕竟就这么 500 分钟，或许已经没时间了🤷‍♂️</br>
+    - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
 - [ ] ~~`Aliyun`~~ 新用户三个月免费音频
