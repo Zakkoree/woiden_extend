@@ -117,6 +117,8 @@
 - [x] **`2Captcha`** 1000次/1$，价格略微比下面便宜，并且识码还可以赚钱
 - [ ] ~~`Yes Captcha`~~ 100次/1¥，新用户免费1500次
 
----  dasdasd
+---
+<img align="right" src="https://img.shields.io/badge/2022.11.22-activity-success" />
+
 
 
