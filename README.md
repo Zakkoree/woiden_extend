@@ -39,7 +39,7 @@
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
 
-> **Note** **例如：** 
+**例如：** 
 ```docker
 docker run -e HOST=woiden.id \
 -e USERNAME=123456 -e PASSWORD=123456 \
@@ -69,7 +69,8 @@ docker run -e HOST=woiden.id \
   ```
 - **Docker**</br>
   ```shell
-  docker run -e HOST=woiden.id -e USERNAME=xxx -e PASSWORD=xxx [可选参数...] -it --rm  ghcr.io/zakkoree/woinden_extend:latest
+  docker run -e HOST=woiden.id -e USERNAME=xxx -e PASSWORD=xxx [可选参数...] \
+  -it --rm  ghcr.io/zakkoree/woinden_extend:latest
   ```
 
 
