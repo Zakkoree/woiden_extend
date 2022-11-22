@@ -42,6 +42,7 @@
 
 
 >  **Warning** **至少有一项语音或者图片参数，建议语音图片两个同时使用**
+
 **例如：** 
 ```docker
 docker run -e HOST=woiden.id \
@@ -51,6 +52,7 @@ docker run -e HOST=woiden.id \
 -e ASR_CHOICE=BAIDU -e APP_ID=123456 -e API_KEY=123456 -e SECRET_KEY=123456 \
 -it --rm  ghcr.io/zakkoree/woinden_extend:latest
 ```
+
 ## 使用
 
 - **Github Action**
