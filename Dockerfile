@@ -1,5 +1,9 @@
 FROM python:bullseye
 
+LABEL maintainer="Zakkoree"<zdy.mail@foxmail.com>
+
+LABEL description="Woiden And Hax Auto Extend"
+
 RUN apt update && apt install ffmpeg -y  \
   && apt clean && rm -rf /var/lib/apt/lists/*
 
