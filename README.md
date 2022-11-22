@@ -49,6 +49,8 @@
   - 3.执行 `续订` 任务，默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 第 6 行来调整频率，每天只要成功续订一次后面任务就会跳过避免浪费解码平台额度
 - **Github Action With 自己服务器**</br>
   `托管自己服务器到 Github Action 中` [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
+- **自己服务器 + Crontab**</br>
+  `把 Python Scrip 或 Docker 运行命令添加到 crontab 里面`
 - **Python Script**
   ```shell
   pip3 install --no-cache-dir -r requirements.txt
@@ -59,8 +61,7 @@
   ```shell
   docker run -e HOST=woiden.id -e USERNAME=xxx -e PASSWORD=xxx [可选参数...] -it --rm  ghcr.io/zakkoree/woinden_extend:latest
   ```
-- **自己服务器 + Crontab**</br>
-  `把 Python Scrip 或 Docker 运行命令添加到 crontab 里面`
+
 
 <details>
  <summary><kbd>GitHub Actions 计划任务语法</kbd></summary>
