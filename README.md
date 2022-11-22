@@ -39,7 +39,16 @@
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
 
-> **例如：** `docker run -e HOST=woiden.id -e USERNAME=123456 -e PASSWORD=123456 TELE_ID=123456 TWOCAPTCHA_TOKEN=123456 ASR_CHOICE=BAIDU APP_ID=123456 API_KEY=123456 SECRET_KEY=123456 -it --rm  ghcr.io/zakkoree/woinden_extend:latest`
+> **例如：** 
+```docker
+docker run -e HOST=woiden.id \
+-e USERNAME=123456 -e PASSWORD=123456 \
+-e TELE_ID=123456 -e TELE_TOKEN=123456\
+
+-e TWOCAPTCHA_TOKEN=123456 \
+-e ASR_CHOICE=BAIDU -e APP_ID=123456 -e API_KEY=123456 -e SECRET_KEY=123456 \
+-it --rm  ghcr.io/zakkoree/woinden_extend:latest
+```
 
 >  **Warning** **至少有一项语音或者图片参数，建议语音图片两个同时使用**
 
