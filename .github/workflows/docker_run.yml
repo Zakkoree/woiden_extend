@@ -19,4 +19,5 @@ jobs:
           -e SECRET_KEY=${{ secrets.SECRET_KEY }} \
           -e ASR_CHOICE=${{ secrets.ASR_CHOICE }} \
           -e IBM_URL=${{ secrets.IBM_URL }} \
+          -e HOST=${{ secrets.HOST }} \
           ghcr.io/zakkoree/woinden_extend:latest
