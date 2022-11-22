@@ -7,11 +7,45 @@
 
 > **Note** `Github Action` 运行时所在的服务器IP可能被 `Google` ban 无法使用语音验证，因为公共的服务器被别人用过，IP被识别为机器人，可能上个人刚好也调用了 `Google reCaptcha` ，所以 `Google reCaptcha` 的语音验证调用能否成功随缘，使用 `2Captcha` 和 `YesCaptcha` 的图片验证不受此影响稳如老狗，甚至加载不出来图片也可以验证通过，建议语音图片两个同时使用即稳定也不费钱，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)，登陆时脚本是先执行语音验证，验证失败再执行图片验证，语音验证频繁调用会被ben ( 没几次就会被ben，不用担心应该就ben一两个小时左右 )，自己服务器使用语音验证最好时间间隔久点
 
+## 参数 <a id='01' />
+
+<kbd>**可选参数**</kbd> 默认 woiden.id
+> `HOST: woiden.id 或 hax.co.id`</br>
+
+<kbd>**必要参数**</kbd> 用户信息
+> `USERNAME: Telegram ID`</br>
+> `PASSWORD: 密码`
+
+<kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
+> `TELE_ID: Telegram ID`</br>
+> `TELE_TOKEN: 机器人Token`</br>
+
+<kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
+> `TWOCAPTCHA_TOKEN: 你的Token`</br>
+
+<kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，任选一个
+> - 百度</br>
+>     - `ASR_CHOICE: BAIDU`
+>     - `APP_ID: 百度语音API的APP_ID`</br>
+>     - `API_KEY: 百度语音API的API_KEY`</br>
+>     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
+> - 讯飞 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
+>     - `ASR_CHOICE: XFYUN`
+>     - `APP_ID: 讯飞语音API的APP_ID`</br>
+>     - `API_KEY: 讯飞语音API的API_KEY`</br>
+>     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
+> - IBM</br>
+>     - `ASR_CHOICE: IBM`
+>     - `APP_ID: IBM API的IDkey`</br>
+>     - `IBM_URL: IBM API的URL`</br>
+
+>  **Warning** **至少有一项语音或者图片参数，建议语音图片两个同时使用**
+
 ## 使用
 
 - **Github Action**
   - 1.初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，不能是今日日期，不然今天不会执行脚本，之后会自动更新
-  - 2.将你自己的 [参数⤵](#01) 添加到Secret
+  - 2.将你自己的 [参数⤴](#01) 添加到Secret
   - 3.执行 `续订` 任务，默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 第 6 行来调整频率，
     `0 0,8,16 */3 * *` 每三天 `0/8/16` 点执行，每天只要成功续订一次后面任务就会跳过避免浪费解码平台额度
 - **Github Action With 自己服务器**
@@ -59,39 +93,6 @@
 
 </details>
 
-## 参数 <a id='01' />
-
-<kbd>**可选参数**</kbd> 默认 woiden.id
-> `HOST: woiden.id 或 hax.co.id`</br>
-
-<kbd>**必要参数**</kbd> 用户信息
-> `USERNAME: Telegram ID`</br>
-> `PASSWORD: 密码`
-
-<kbd>**可选参数**</kbd> Telegram 推送参数 ( 都有服务器了会没有电报吗 )
-> `TELE_ID: Telegram ID`</br>
-> `TELE_TOKEN: 机器人Token`</br>
-
-<kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
-> `TWOCAPTCHA_TOKEN: 你的Token`</br>
-
-<kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，任选一个
-> - 百度</br>
->     - `ASR_CHOICE: BAIDU`
->     - `APP_ID: 百度语音API的APP_ID`</br>
->     - `API_KEY: 百度语音API的API_KEY`</br>
->     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - 讯飞 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
->     - `ASR_CHOICE: XFYUN`
->     - `APP_ID: 讯飞语音API的APP_ID`</br>
->     - `API_KEY: 讯飞语音API的API_KEY`</br>
->     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
-> - IBM</br>
->     - `ASR_CHOICE: IBM`
->     - `APP_ID: IBM API的IDkey`</br>
->     - `IBM_URL: IBM API的URL`</br>
-
->  **Warning** **至少有一项语音或者图片参数，建议语音图片两个同时使用**
 
 ## 集成
 <kbd>**语音识别**</kbd>
