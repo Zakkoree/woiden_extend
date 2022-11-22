@@ -1,7 +1,7 @@
 
-# Woiden And Hax Auto Extend  <img align="right" src="https://img.shields.io/badge/2022.11.22-activity-success" />
+# Woiden And Hax Auto Extend <sup>💯</sup>  <img align="right" src="https://img.shields.io/badge/2022.11.22-activity-success" />
 
-**woiden.id 和 hax.co.id 自动续订**    <sup>💯</sup>
+**woiden.id 和 hax.co.id 自动续订**    
 
 `activity` 徽章显示最后执行成功的日期，脚本是否稳定运行，`Github` 是 `UTC` 时区会有时差，一天误差属于正常
 
