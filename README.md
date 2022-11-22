@@ -12,7 +12,7 @@
 <kbd>**可选参数**</kbd> 默认 woiden.id
 > `HOST: woiden.id 或 hax.co.id`</br>
 
-<kbd>**必要参数**</kbd> 用户信息
+<kbd>**必要参数**</kbd> 用户
 > `USERNAME: Telegram ID`</br>
 > `PASSWORD: 密码`
 
@@ -40,12 +40,13 @@
 >     - `IBM_URL: IBM API的URL`</br>
 
 **例如：** 
-```docker
-docker run -e HOST=woiden.id \
--e USERNAME=123456 -e PASSWORD=123456 \
--e TELE_ID=123456 -e TELE_TOKEN=123456\
--e TWOCAPTCHA_TOKEN=123456 \
--e ASR_CHOICE=BAIDU -e APP_ID=123456 -e API_KEY=123456 -e SECRET_KEY=123456 \
+```shell
+docker run \
+-e HOST=woiden.id \ # 选择
+-e USERNAME=123456 -e PASSWORD=123456 \ # 用户
+-e TELE_ID=123456 -e TELE_TOKEN=123456\ # Telegram 推送
+-e TWOCAPTCHA_TOKEN=123456 \ # 图片和V3验证
+-e ASR_CHOICE=BAIDU -e APP_ID=123456 -e API_KEY=123456 -e SECRET_KEY=123456 \ # 语音验证
 -it --rm  ghcr.io/zakkoree/woinden_extend:latest
 ```
 
