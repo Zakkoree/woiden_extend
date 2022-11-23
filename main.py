@@ -20,6 +20,7 @@ import urllib
 import telepot
 import ibmAPI
 #import xfyunAPI
+import tencentAPI
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from aip import AipSpeech
@@ -380,7 +381,7 @@ def mp3_change_pcm(audioFile):
     ff.run()
     return outpath
 
-def audioToText(audioFile):
+def audioToText(audioFile, url):
     ASR_CHOICE = None
     try:
         ASR_CHOICE = os.environ['ASR_CHOICE']
@@ -404,6 +405,12 @@ def audioToText(audioFile):
 #            XFYUN_API_KEY = os.environ['API_KEY']
 #            XFYUN_SECRET_KEY = os.environ['SECRET_KEY']
 #            return xfyunAPI.asr(APPID=XFYUN_APP_ID, APISecret=XFYUN_SECRET_KEY, APIKey=XFYUN_API_KEY, AudioFile=mp3_change_pcm(audioFile))
+
+        elif ASR_CHOICE == 'TENCENT':
+            SECRET_ID = os.environ['SECRET_ID']
+            SECRET_KEY = os.environ['SECRET_KEY']
+            return tencentAPI.asr(SECRET_KEY, SECRET_KEY, url)
+    
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
             return None
@@ -453,7 +460,7 @@ def reCAPTCHA(page):
         urllib.request.urlretrieve(src, outPath)
 
         # Speech To Text Conversion
-        key = audioToText(outPath)
+        key = audioToText(outPath, src)
         logger.info("Recaptcha Key:" + str(key))
 
         # key in results and submit
