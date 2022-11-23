@@ -251,7 +251,6 @@ def recaptchaV3(page):
     req = Request(url=chaper_url, headers=headers) 
     html = urlopen(req)
     bs = str(BeautifulSoup(html, 'html.parser'))
-
     actionIndex = bs.find("action:")
     sitekeyStart = bs.find("execute(") + 9
     sitekeyEnd = actionIndex - 3
