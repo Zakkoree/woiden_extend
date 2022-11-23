@@ -29,15 +29,16 @@
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - IBM</br>
->     - `ASR_CHOICE: IBM`
->     - `APP_ID: IBM API的IDkey`</br>
->     - `IBM_URL: IBM API的URL`</br>
 > - 腾讯</br>
 >     - `ASR_CHOICE: TENCENT`
 >     - `SECRET_ID: 腾讯语音API的SECRET_ID`</br>
 >     - `SECRET_KEY: 腾讯语音API的SECRET_KEY`</br>
-> - ~~讯飞~~ ( 不能使用 [详细⤵](#001) )</br>
+> - IBM</br>
+>     - `ASR_CHOICE: IBM`
+>     - `APP_ID: IBM API的IDkey`</br>
+>     - `IBM_URL: IBM API的URL`</br>
+
+> - ~~讯飞~~ ( 🚫不能使用 [详细⤵](#001) )</br>
 >     - `ASR_CHOICE: XFYUN`
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
 >     - `API_KEY: 讯飞语音API的API_KEY`</br>
@@ -117,15 +118,15 @@ docker run \
 ## 集成<a id='1' />
 <kbd>**语音识别**</kbd>
 - [x] **`BaiDu`** 新用户 30000 次一年期限免费音频
-- [x] **`Tencent`** 每月 10 小时免费音频
-- [x] **`Xfyun`** 每月 500 次免费音频流，注意是语音听写API，语音转写额度太少</br><a id='001' />
-    - 🚫 `Github Action` 去除讯飞语音支持，偶尔能用简直莫名其妙，可能服务器环境不同导致，和 `Docker` 一样原因</br>
-    - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
-    - ⚠ `Python Script` 直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
+- [x] **`Tencent`** 每月 10 小时免费音频 (推荐)
 - [x] **`IBM`** 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
     - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
+- [x] **`Xfyun`** 每月 500 次免费音频流，注意是语音听写API，语音转写额度太少</br><a id='001' />
+    - 🚫 `Github Action` 去除讯飞语音支持，偶尔能用简直莫名其妙，可能服务器环境不同导致，和 `Docker` 一样原因</br>
+    - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
+    - ⚠ `Python Script` 直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
 - [ ] ~~`Aliyun`~~ 新用户三个月免费音频
 - [ ] ~~`Azure`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
 - [ ] ~~`Google`~~ 国内要挂代理访问，需付费，注册需外币卡
