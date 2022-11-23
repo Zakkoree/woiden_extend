@@ -408,7 +408,7 @@ def audioToText(audioFile, url):
         elif ASR_CHOICE == 'TENCENT':
             SECRET_ID = os.environ['SECRET_ID']
             SECRET_KEY = os.environ['SECRET_KEY']
-            return tencentAPI.asr(SECRET_KEY, SECRET_KEY, url)
+            return tencentAPI.asr(SECRET_ID, SECRET_KEY, url)
     
         else :
             logger.warn("ASR_CHOICE setup error, skip ASR")
