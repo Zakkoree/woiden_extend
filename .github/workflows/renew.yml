@@ -49,11 +49,11 @@ jobs:
       - name: Install Python
         run: |
           sudo sed -i 's/azure\.//' /etc/apt/sources.list && sudo apt update && \
-          sudo apt install python3 python3-dev
+          sudo apt install python3 python3-pip
       
       - name: Install requirements
         run: |
-          pip3 install setuptools==58.2.0
+          pip install git+https://github.com/lucasb-eyer/pydensecrf.git
           pip3 install -r ./requirements.txt
           pip3 install cffi==1.12.3 gevent==1.4.0 greenlet==0.4.15 pycparser==2.19 six==1.12.0 websocket==0.2.1 websocket-client==0.56.0
           playwright install --with-deps
