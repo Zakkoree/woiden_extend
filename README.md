@@ -1,5 +1,5 @@
 
-# Woiden And Hax Auto Extend <sup>💯</sup>  <img align="right" src="https://img.shields.io/badge/2022.11.23-activity-success"/>
+# Woiden And Hax Auto Extend <sup>💯</sup>  <img align="right" src="https://img.shields.io/badge/2022.11.22-activity-success"/>
 
 **woiden.id 和 hax.co.id 自动续订**    
 
@@ -23,21 +23,22 @@
 <kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证支持 `百度` `讯飞` `IBM` ，任选一个
+<kbd>**可选参数**</kbd> 语音验证支持 `百度` ~~`讯飞`~~ `IBM` ，任选一个
 > - 百度</br>
 >     - `ASR_CHOICE: BAIDU`
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-> - 讯飞 ( Docker不能使用讯飞 [详细⤵](#001) )</br>
->     - `ASR_CHOICE: XFYUN`
->     - `APP_ID: 讯飞语音API的APP_ID`</br>
->     - `API_KEY: 讯飞语音API的API_KEY`</br>
->     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
+
 > - IBM</br>
 >     - `ASR_CHOICE: IBM`
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
+> - ~~讯飞~~ ( 不能使用讯飞 [详细⤵](#001) )</br>
+>     - `ASR_CHOICE: XFYUN`
+>     - `APP_ID: 讯飞语音API的APP_ID`</br>
+>     - `API_KEY: 讯飞语音API的API_KEY`</br>
+>     - `SECRET_KEY: 讯飞语音API的SECRET_KEY`</br>
 
 **例如：** 
 ```shell
@@ -114,7 +115,7 @@ docker run \
 <kbd>**语音识别**</kbd>
 - [x] **`BaiDu`** 新用户 30000 次一年期限免费音频
 - [x] **`Xfyun`** 每月 500 次免费音频流</br><a id='001' />
-    - ✅ `Github Action` 正常使用</br>
+    - 🚫 `Github Action` 去除讯飞语音支持，偶尔能用简直莫名其妙，可能服务器环境不同导致，和 `Docker` 一样原因</br>
     - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
     - ⚠ `Python Script` 直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
 - [x] **`IBM`** 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
@@ -130,6 +131,3 @@ docker run \
 - [ ] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次
 
 ---
-
-
-
