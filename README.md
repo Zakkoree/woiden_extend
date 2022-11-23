@@ -123,7 +123,7 @@ docker run \
     - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
     - `URL：https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/7e2f69e7-a5e8-4d56-91ae-f4dc7b4a1f0b`
-- [x] **`Xfyun`** 每月 500 次免费音频流，注意是语音听写API，语音转写额度太少</br><a id='001' />
+- [x] ~~**`Xfyun`**~~ 每月 500 次免费音频流，注意是语音听写API，语音转写额度太少</br><a id='001' />
     - 🚫 `Github Action` 去除讯飞语音支持，偶尔能用简直莫名其妙，可能服务器环境不同导致，和 `Docker` 一样原因</br>
     - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
     - ⚠ `Python Script` 我本地使用是可以，直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
