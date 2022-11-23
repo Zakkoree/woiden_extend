@@ -49,8 +49,8 @@ def asr(secretId, secretKey, url):
         # 返回的resp是一个DescribeTaskStatusResponse的实例，与请求对象对应
         qesp = client.DescribeTaskStatus(qeq)
         # 输出json格式的字符串回包
-        print(qesp.to_json_string())
         if json.loads(qesp.to_json_string())['Data']['Status'] == 2:
+            logger.info(qesp.to_json_string())
             return json.loads(qesp.to_json_string())['Data']['ResultDetail'][0]['SliceSentence']
         elif json.loads(qesp.to_json_string())['Data']['Status'] == 1 or json.loads(qesp.to_json_string())['Data']['Status'] == 0:
             time.sleep(1)
