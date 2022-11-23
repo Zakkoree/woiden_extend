@@ -117,8 +117,8 @@ docker run \
 
 ## 集成<a id='1' />
 <kbd>**语音识别**</kbd>
+- [x] **`Tencent`** 每月 10 小时免费音频
 - [x] **`BaiDu`** 新用户 30000 次一年期限免费音频
-- [x] **`Tencent`** 每月 10 小时免费音频 (推荐)
 - [x] **`IBM`** 每月 500 分钟免费音频，但准确度不够，注册需外币卡</br>
     - 分享一个来自 [wx5ecc8c432b706](https://blog.51cto.com/u_14825502) 的密钥和URl</br>
     - `IDkey：nblnZuv5E5A_wo5j9eYC-nQVWHKyY5HxJXuEPnNpJgrr`</br>
