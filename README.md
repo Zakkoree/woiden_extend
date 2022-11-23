@@ -23,7 +23,7 @@
 <kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证支持 `百度` `IBM`  ~~`讯飞`~~，任选一个
+<kbd>**可选参数**</kbd> 语音验证支持 `百度` `IBM` `腾讯` ~~`讯飞`~~，任选一个
 > - 百度</br>
 >     - `ASR_CHOICE: BAIDU`
 >     - `APP_ID: 百度语音API的APP_ID`</br>
@@ -33,6 +33,10 @@
 >     - `ASR_CHOICE: IBM`
 >     - `APP_ID: IBM API的IDkey`</br>
 >     - `IBM_URL: IBM API的URL`</br>
+> - 腾讯</br>
+>     - `ASR_CHOICE: TENCENT`
+>     - `SECRET_ID: 腾讯语音API的API_KEY`</br>
+>     - `SECRET_KEY: 腾讯语音API的SECRET_KEY`</br>
 > - ~~讯飞~~ ( 不能使用 [详细⤵](#001) )</br>
 >     - `ASR_CHOICE: XFYUN`
 >     - `APP_ID: 讯飞语音API的APP_ID`</br>
