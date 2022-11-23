@@ -15,6 +15,7 @@ env:
   TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
   ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
   IBM_URL: ${{ secrets.IBM_URL }}
+  SECRET_ID: ${{ secrets.SECRET_ID }}
 
 #       sudo sed -i 's/azure\.//' /etc/apt/sources.list 防止apt安装失败
 
