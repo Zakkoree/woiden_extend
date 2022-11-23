@@ -35,7 +35,7 @@
 >     - `IBM_URL: IBM API的URL`</br>
 > - 腾讯</br>
 >     - `ASR_CHOICE: TENCENT`
->     - `SECRET_ID: 腾讯语音API的API_KEY`</br>
+>     - `SECRET_ID: 腾讯语音API的SECRET_ID`</br>
 >     - `SECRET_KEY: 腾讯语音API的SECRET_KEY`</br>
 > - ~~讯飞~~ ( 不能使用 [详细⤵](#001) )</br>
 >     - `ASR_CHOICE: XFYUN`
