@@ -23,7 +23,7 @@
 <kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
-<kbd>**可选参数**</kbd> 语音验证支持 `百度` `IBM` `腾讯` ~~`讯飞`~~，任选一个
+<kbd>**可选参数**</kbd> 语音验证支持 `腾讯` `百度` `IBM` ~~`讯飞`~~，任选一个
 > - 腾讯</br>
 >     - `ASR_CHOICE: TENCENT`
 >     - `SECRET_ID: 腾讯语音API的SECRET_ID`</br>
