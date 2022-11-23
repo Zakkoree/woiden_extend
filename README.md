@@ -29,7 +29,6 @@
 >     - `APP_ID: 百度语音API的APP_ID`</br>
 >     - `API_KEY: 百度语音API的API_KEY`</br>
 >     - `SECRET_KEY: 百度语音API的SECRET_KEY`</br>
-
 > - IBM</br>
 >     - `ASR_CHOICE: IBM`
 >     - `APP_ID: IBM API的IDkey`</br>
