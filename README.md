@@ -69,6 +69,7 @@ docker run \
 - **Python Script**
   ```shell
   pip3 install --no-cache-dir -r requirements.txt
+  playwright install --with-deps
   HOST="woiden.id" USERNAME="xxx" PASSWORD="xxx" [可选参数...]
   python3 main.py
   ```
