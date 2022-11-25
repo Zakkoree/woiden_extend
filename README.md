@@ -7,11 +7,6 @@
 
 > **Note** `Github Action` 运行时所在的服务器IP可能被 `Google` ban 无法使用语音验证，因为公共的服务器被别人用过，IP被识别为机器人，可能上个人刚好也调用了 `Google reCaptcha` ，所以 `Google reCaptcha` 的语音验证调用能否成功随缘，使用 `2Captcha` 和 `YesCaptcha` 的图片验证不受此影响稳如老狗，甚至加载不出来图片也可以验证通过，建议语音图片两个同时使用即稳定也不费钱，或者[托管自己服务器](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)，登陆时脚本是先执行语音验证，验证失败再执行图片验证，语音验证频繁调用会被ben ( 没几次就会被ben，不用担心应该就ben一两个小时左右 )，自己服务器使用语音验证最好时间间隔久点
 
-**推送结果：**
-
-| ![成功](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/21-09-52-07e5c9-321ebc964e7c5daa5ca2057679a61d41-20221125210952.png "成功") | ![账户错误](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/23-48-16-f0cb04-2b6f4dfe72d24111df35310b81144e4b-20221125234815.png "账户错误") | ![终止](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/23-25-26-ec97d6-8efc47f259b881b1c49fb71e840a6207-20221125232525.png "终止") 
-|  ----  | ----  | ----  |
-
 ## 参数 <a id='01' />
 
 <kbd>**可选参数**</kbd> 默认 woiden.id
