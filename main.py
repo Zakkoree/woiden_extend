@@ -216,10 +216,11 @@ def openLoginUrl(page):
         page.click('iframe[title="reCAPTCHA"]')
         page.click('iframe[title="reCAPTCHA"]')
     except Exception as e:
+        logger.error("open login url fail")
         logger.error(e)
-        openLoginNum += 1
-        if openLoginNum <= loginRetryNum:
-            logger.error(e)
+        if openLoginNum <= loginRetryNum + 1:
+            openLoginNum += 1
+            logger.info("try open login url " + str(openLoginNum))
             openLoginUrl(page)
         else:
             logger.error("open login url fail")
