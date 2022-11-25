@@ -232,7 +232,9 @@ def loginRetry(page):
     if authRetry >= loginRetryNum:
         logger.error("longin failed!")
         teleinfomsg = '''Longin Failed ‼
-        Invalid Username / Password Or Validation of invalid ⁉'''
+        
+        Invalid Username / Password Or Validation of invalid ⁉
+        '''
         send(teleinfomsg)
         sys.exit()
     else:
