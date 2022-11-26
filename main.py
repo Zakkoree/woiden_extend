@@ -514,7 +514,8 @@ def numCAPTCHA(page):
 
 if __name__ == '__main__':
     try:
-        origin_host = os.environ['HOST']
+        if os.environ['HOST'] is not None and len(os.environ['HOST']) > 0:
+            origin_host = os.environ['HOST']
     except:
         pass
     with sync_playwright() as playwright:
