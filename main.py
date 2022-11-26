@@ -206,7 +206,13 @@ openLoginNum = 0
 def openLoginUrl(page):
     global openLoginNum
     try:
-        logger.info("load " + origin_host)
+        if origin_host == "woiden.id":
+            logger.info("load woiden.id")
+        elif origin_host == "hax.co.id":
+            logger.info("load hax.co.id")
+        else:
+            logger.error("host erroe")
+            sys.exit()
         page.goto('https://' + origin_host + login_path)
         adsClear(page)
         logger.info("fill username")
