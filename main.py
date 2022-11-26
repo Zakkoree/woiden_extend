@@ -212,6 +212,11 @@ def openLoginUrl(page):
             logger.info("load hax.co.id")
         else:
             logger.error("host erroe")
+            teleinfomsg = '''HOST ERROR ‼
+        
+        Erreur de configuration de la host
+        '''
+            send(teleinfomsg)
             sys.exit()
         page.goto('https://' + origin_host + login_path)
         adsClear(page)
