@@ -9,7 +9,7 @@
 
 ## 参数 <a id='01' />
 
-<kbd>**可选参数**</kbd> 默认 woiden.id
+<kbd>**可选参数**</kbd> 选择平台默认 woiden.id
 > `HOST: woiden.id 或 hax.co.id`</br>
 
 <kbd>**必要参数**</kbd> 用户
