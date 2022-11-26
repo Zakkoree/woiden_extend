@@ -114,6 +114,10 @@ docker run \
 
 </details>
 
+## 结果
+
+| ![成功](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/21-09-52-07e5c9-321ebc964e7c5daa5ca2057679a61d41-20221125210952.png "成功") | ![账户错误](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/23-48-16-f0cb04-2b6f4dfe72d24111df35310b81144e4b-20221125234815.png "账户错误") | ![终止](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/11/25/23-25-26-ec97d6-8efc47f259b881b1c49fb71e840a6207-20221125232525.png "终止") 
+|  ----  | ----  | ----  |
 
 ## 集成<a id='1' />
 <kbd>**语音识别**</kbd>
