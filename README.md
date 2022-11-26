@@ -139,4 +139,13 @@ docker run \
 - [x] **`2Captcha`** 1000次/1$，价格比下面便宜，并且识码还可以赚钱
 - [ ] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次
 
+## 分享
+**woiden.id 和 hax.co.id 服务器使用小技巧**
+
+hax只有IP6，并且woiden的IP4也被墙了
+不知道你们都怎么使用，我的宽带是没有IP6地址的
+都是开着VPN连woiden,再通过woiden跳到hax，使用起来非常不方便
+于是想起VPN组网，然后我就有了IP4地址，也不需要再挂VPN可以直连
+使用的是 `zerotier` ，组成p2p的虚拟局域网并不需要公网IP，很奈斯
+
 ---
