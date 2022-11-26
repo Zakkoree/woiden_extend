@@ -508,7 +508,8 @@ def numCAPTCHA(page):
 
 if __name__ == '__main__':
     try:
-        origin_host = os.environ['HOST']
+        if os.environ['HOST'] is not None and str(os.environ['HOST']).isspace() is not False:
+            origin_host = os.environ['HOST']
     except:
         pass
     with sync_playwright() as playwright:
