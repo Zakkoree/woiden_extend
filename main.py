@@ -151,18 +151,17 @@ def run(page):
             try:
                 update=open('renewTime', 'w')
                 lastTime = file.read()
-                update.close()
-            except Exception as e:
-                logger.error(e)
-            logger.error("renew fail")
+                logger.error("renew fail")
             # barkPush('[ERROR] renew fail')
-            file.read()
-            teleinfomsg = '''Renew Fail ‼
-            
+                teleinfomsg = '''Renew Fail ‼
         {0}
         Last Renew Time {1}
         '''.format(message, lastTime)
-            send(teleinfomsg)
+                send(teleinfomsg)
+                update.close()
+            except Exception as e:
+                logger.error(e)
+            
         else:
             teleinfomsg = '''Renew Fail ‼
         {0}
