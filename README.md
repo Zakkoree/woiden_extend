@@ -130,7 +130,7 @@ docker run \
 - [x] ~~**`Xfyun`**~~ 每月 500 次免费音频流，注意是语音听写API，语音转写额度太少</br><a id='001' />
     - 🚫 `Github Action` 去除讯飞语音支持，偶尔能用简直莫名其妙，可能服务器环境不同导致，和 `Docker` 一样原因</br>
     - ❎ `Docker Build` 镜像不含讯飞，因为加讯飞构建会导致各种依赖冲突和系统依赖包</br>
-    - ⚠ `Python Script` 我本地使用是可以，直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [402~406行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
+    - ⚠ `Python Script` 我本地使用是可以，直接运行需要安装 [xfyunAPI.py 的依赖项](https://github.com/Zakkoree/woiden_extend/blob/main/xfyunAPI.py#L4-L10) 和打开 `main.py` [22行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L22) 和 [437~441行](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L402-L406) 的注释
 - [ ] ~~`Aliyun`~~ 新用户三个月免费音频
 - [ ] ~~`Azure`~~ 每月 5 小时免费音频，每小时音频 $1.543，注册需外币卡
 - [ ] ~~`Google`~~ 国内要挂代理访问，需付费，注册需外币卡
