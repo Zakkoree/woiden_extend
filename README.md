@@ -137,7 +137,8 @@ docker run \
 
 <kbd>**图片识别**</kbd>  <kbd>**V3评分**</kbd>
 - [x] **`2Captcha`** 1000次/1$，价格比下面便宜，并且识码还可以赚钱
-- [ ] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次
+- [x] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次
+    - API已经调试好了，现在懒得加参数了，以后有空闲可能会加，想使用可以自己加，使用方式参考 [yescaptchaAPI.py L105-L121](https://github.com/Zakkoree/woiden_extend/blob/main/yescaptchaAPI.py#L105-L121) 和 [main.py L466-L473](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473)
 
 ## 分享
 **woiden.id 和 hax.co.id 服务器使用小技巧**
