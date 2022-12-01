@@ -150,6 +150,6 @@ docker run \
 
 hax只有IP6，并且woiden的IP4也被墙了，网页的ssh太难用，我的宽带不支持IP6，都是开着VPN连上woiden再通过woiden跳到hax，使用起来非常不方便和不稳定</br>
 
-于是想起VPN组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的是 `zerotier` ，并不需要公网IP，组成p2p的虚拟局域网
+于是想起VPN组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的工具是 `zerotier` ，并不需要公网IP，组成p2p的虚拟局域网
 
 ---
