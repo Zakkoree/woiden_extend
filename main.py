@@ -41,7 +41,7 @@ info_path = "/vps-info"
 google_recaptchaV3_js_path = "/dist/js/renew-vps.js"
 
 # 网络连接超时时间（1000ms=1s）
-timeout = 1000 * 60 * 1
+timeout = 1000 * 60 * 2
 # 登陆重试次数
 loginRetryNum = 2
 # 续订重试次数  0=直到续订成功(虽然不用重新登陆验证,但不建议使用0,不可控,正常的5次以内可以成功)  
@@ -308,7 +308,29 @@ def extend(page, tokenCode):
     global extendRetry
     global message
     logger.info("click Extend VPS")
-    page.goto('https://' + origin_host + renew_path)
+    try:
+        page.goto('https://' + origin_host + renew_path)
+    except Exception as e:
+        logger.error("renew_path Timeout")
+        logger.error(e)
+        # 续订固定重试次数
+        if extendState or loadingIndex>5:
+            if extendRetryNum == 0:
+                logger.info("After " + str(intervalTime) + " seconds try renew " + str(extendRetry))
+                time.sleep(intervalTime)
+                extend(page, tokenCode)
+            else:
+                extendRetry += 1
+                if extendRetry >= extendRetryNum + 1:
+                    return False
+                logger.info("After " + str(intervalTime) + " seconds try renew " + str(extendRetry))
+                time.sleep(intervalTime)
+                if extend(page, tokenCode):
+                    return True
+        else:
+            message = body
+            return True
+      
     adsClear(page)
     if tokenCode != None:
         javacsript = """$("button[name='submit_button']").unbind('click').click(function(){$('#form-submit').prepend('<input type="hidden" name="token" value="{token}">');$('#form-submit').prepend('<input type="hidden" name="action" value="renew_vps">');$("html, body").animate({scrollTop:300},"slow");$("#response").html('<div class="progress" id="progress"><div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">Loading.....</span></div></div>'),$(".progress-bar").animate({ width:"25%"}),$(".progress-bar").animate({width:"55%"}),$.ajax({ type:"POST",url:"/renew-vps-process/",data: $("form.submit").serialize(),success:function (a) {$(".progress-bar").animate({ width:"70%"}),$(".progress-bar").animate({width:"100%"}),$("#response").html(a),$("#form-submit").hide(1000)},error:function(){alert("Something wrong !")}})})""".replace("{token}",  tokenCode)
