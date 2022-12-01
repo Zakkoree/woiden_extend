@@ -20,7 +20,7 @@
 > `TELE_ID: Telegram ID`</br>
 > `TELE_TOKEN: 机器人Token`</br>
 
-<kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`
+<kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`  ( 使用 `Yes Captcha` [参考⤵](#002) )
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
 <kbd>**可选参数**</kbd> 语音验证支持 `腾讯` `百度` `IBM` ~~`讯飞`~~，任选一个
@@ -137,14 +137,15 @@ docker run \
 
 <kbd>**图片识别**</kbd>  <kbd>**V3评分**</kbd>
 - [x] **`2Captcha`** 1000次/1$，价格比下面便宜，并且识码还可以赚钱
-- [x] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次
-    - API已经调试好了，现在懒得加参数了，以后有空闲可能会加，想使用可以自己加，使用方式参考 [yescaptchaAPI.py L105-L121](https://github.com/Zakkoree/woiden_extend/blob/main/yescaptchaAPI.py#L105-L121) 和 [main.py L466-L473](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473)
+- [x] ~~`Yes Captcha`~~ 66次/1¥，新用户免费1500次 <a id='002' />
+    - ⚠ API已经调试好了，现在懒得加参数了，以后有空闲可能会加
+    - ⚠ 如果想使用可以参考 [yescaptchaAPI.py L105-L121](https://github.com/Zakkoree/woiden_extend/blob/main/yescaptchaAPI.py#L105-L121) 和 [main.py L466-L473](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473)
 
 ## 分享
 **woiden.id 和 hax.co.id 服务器使用小技巧**
 
-hax只有IP6，并且woiden的IP4也被墙了，网页的ssh太难用，不知道你们都怎么连接，我的宽带不支持IP6，都是开着VPN连上woiden再通过woiden跳到hax，使用起来非常不方便和不稳定</br>
+hax只有IP6，并且woiden的IP4也被墙了，网页的ssh太难用，我的宽带不支持IP6，都是开着VPN连上woiden再通过woiden跳到hax，使用起来非常不方便和不稳定</br>
 
-于是想起VPN组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的是 `zerotier` ，并不需要公网IP，组成p2p的虚拟局域网，很奈斯
+于是想起VPN组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的是 `zerotier` ，并不需要公网IP，组成p2p的虚拟局域网
 
 ---
