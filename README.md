@@ -62,7 +62,7 @@ docker run \
   - 1.初次使用需要修改 [renewTime](https://github.com/Zakkoree/woiden_extend/blob/main/renewTime#L1) 文件内日期，修改为你现在日期前六天内，之后会自动更新，不能是今日日期，不然今天不会执行脚本
   - 2.将 [参数⤴](#01) 添加到Secret [参考➡](https://docs.github.com/cn/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
   - 3.执行 `续订` 任务 [参考➡](https://docs.github.com/cn/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow)，默认手动+cron， `0 0,8,16 * * *` 每天 `0/8/16` 点执行，你可以修改 [/.github/workflows/renew.yml](https://github.com/Zakkoree/woiden_extend/blob/main/.github/workflows/renew.yml#L6) 第 6 行来调整频率，每天只要成功续订一次后面任务就会跳过避免浪费解码平台额度
-  - ⚠ 可能会有段时间无法使用(`UTC` 16点左右 | 北京时间0点左右)，原因是apt安装包时网络异常，使用docker镜像没影响只是少了更新 `README.md` 徽章时间的功能
+  - ⚠ 可能会有段时间无法使用(`UTC` 16点左右 | 北京时间0点左右)，原因是apt安装包时网络异常，影响不大仍可正常使用，使用docker镜像没影响只是少了更新 `README.md` 徽章时间的功能
 - **Github Action With 自己服务器**</br>
   `托管自己服务器到 Github Action 中` [参考➡](https://docs.github.com/cn/actions/hosting-your-own-runners/about-self-hosted-runners)
 - **自己服务器 + Crontab**</br>
