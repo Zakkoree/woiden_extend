@@ -142,7 +142,7 @@ docker run \
 
 - [x] **`2Captcha`** 1000次/1$，价格比下面便宜，并且识码还可以赚钱
 - [x] ~~`Yes Captcha`~~ 66次/1¥，新用户可申请1500试用积分也就是100次 <a id='002' />
-    - ⚠ API已经调试好了，现在懒得配置环境参数了，以后有空闲再配置吧</br>如果想使用可以参考 [yescaptchaAPI.py L105-L121](https://github.com/Zakkoree/woiden_extend/blob/main/yescaptchaAPI.py#L105-L121) 和 [main.py L466-L473](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473)
+    - ⚠ 免费额度太少懒得配置环境参数了，API已经调试好了，如果想使用可以参考 [yescaptchaAPI.py L105-L121](https://github.com/Zakkoree/woiden_extend/blob/main/yescaptchaAPI.py#L105-L121) 和 [main.py L466-L473](https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473)
 
 
 ## 分享
