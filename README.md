@@ -157,6 +157,6 @@ hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用�
 
 配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 VPN  ✈了 ( 网速够用，由于网络波动勉强4K，还可以开启BBR提速 )，嗯~  这反转 :)
 
-本项目为学习 `python` `linux`，如果有更棒的工具技巧请艾特我 🤝
+本项目为学习 `python` `linux` 等，如果有更棒的工具技巧[请艾特我]([https://github.com/Zakkoree/woiden_extend/blob/main/main.py#L466-L473](https://github.com/Zakkoree)) 🤝
 
 ---
