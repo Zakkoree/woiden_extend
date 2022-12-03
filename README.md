@@ -151,11 +151,11 @@ docker run \
 ## 分享
 **woiden.id 和 hax.co.id 服务器使用小技巧**
  
-hax 只有IPv6，并且 woiden 的 IPv4 也被墙了，网页的 ssh 太难用，我的宽带不支持 IPv6 ，都是开着 VPN 连上 woiden 再通过 woiden 跳到 hax ，使用起来非常不方便和不稳定</br>
+hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用，我的宽带也不支持 IPv6 ，都是开着 VPN 连上 woiden 再通过 woiden 跳到 hax ，使用起来非常不方便不稳定</br>
 
-于是想起 VPN 组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的工具是 `zerotier` ，并不需要公网 IP，组成 p2p 的虚拟局域网 ( 参照官网文档教程只配置 hax 就行了，woiden 有点麻烦没必要折腾，如果是 linux 大佬请随意 )
+于是想起了 VPN 组网，然后就有了 IP4 地址，也不需要再挂 VPN 可以直连，使用的工具是 `zerotier` ，并不需要公网 IP，组成 p2p 的虚拟局域网 ( 参照官网文档教程配置 hax 就行了，woiden 有点麻烦没必要折腾，如果是 linux 大佬请随意 )
 
-配合 `Squid` 工具使用，然后你就会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 VPN  ✈了 ( 网速够用，由于网络波动勉强4K，还可以开启BBR提速 )，嗯~  这反转 :)
+配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 VPN  ✈了 ( 网速够用，由于网络波动勉强4K，还可以开启BBR提速 )，嗯~  这反转 :)
 
 本项目为学习 `python` `linux`，如果有更棒的工具技巧请艾特我 🤝
 
