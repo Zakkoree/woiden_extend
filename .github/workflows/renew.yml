@@ -13,6 +13,7 @@ env:
   TWOCAPTCHA_TOKEN: ${{ secrets.TWOCAPTCHA_TOKEN }}
   TELE_ID: ${{ secrets.TELE_ID }}
   TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
+  TENC_TOKEN: ${{ secrets.TENC_TOKEN }}
   ASR_CHOICE: ${{ secrets.ASR_CHOICE }}
   IBM_URL: ${{ secrets.IBM_URL }}
   SECRET_ID: ${{ secrets.SECRET_ID }}
