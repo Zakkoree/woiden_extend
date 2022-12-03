@@ -21,6 +21,7 @@ import telepot
 import ibmAPI
 #import xfyunAPI
 import tencentAPI
+import json
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from aip import AipSpeech
@@ -50,6 +51,7 @@ extendRetryNum = 10
 intervalTime = 10
 
 additional_information = '''@Zakkoree https://github.com/Zakkoree/woiden_extend'''
+additional_information_ten = '''@Zakkoree <a href="https://github.com/Zakkoree/woiden_extend">https://github.com/Zakkoree/woiden_extend</a>'''
  
 logger = Logger(LoggerName="Extend")
 
@@ -68,23 +70,21 @@ def send(txt):
         logger.info("Telebot push")
     except Exception as e:
         logger.error(e)
-
-def barkPush(body):
-    # bark push
-    # barkUrl = 'https://api.day.app/' + BARKKEY
-    # title = 'HaxExtend'
-    # requests.get(url=f'{barkUrl}/{title}/{body}?isArchive=1')
+    # tencent push
     try:
-        WXURL = os.environ['WXURL']
+        url = 'http://www.pushplus.plus/send'
         data = {
-            "msgtype": "text",
-            "text": {
-                "content": f"{origin_host}:{body}"
-            }
+            "token":os.environ['TENC_TOKEN'],
+            "title":origin_host,
+            # "template":"markdown",
+            "content":txt + additional_information_ten
         }
-        requests.post(WXURL, json=data)
-    except:
-        return
+        body=json.dumps(data).encode(encoding='utf-8')
+        headers = {'Content-Type':'application/json'}
+        requests.post(url,data=body,headers=headers)
+        logger.info("Telebot push")
+    except Exception as e:
+        logger.error(e)
 
 def main(playwright: Playwright) -> None:
     # browser = playwright.chromium.launch(channel="chrome", headless=False)
