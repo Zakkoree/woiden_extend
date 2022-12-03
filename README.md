@@ -150,11 +150,13 @@ docker run \
 
 ## 分享
 **woiden.id 和 hax.co.id 服务器使用小技巧**
+ 
+hax 只有IPv6，并且 woiden 的 IPv4 也被墙了，网页的 ssh 太难用，我的宽带不支持 IPv6 ，都是开着 VPN 连上 woiden 再通过 woiden 跳到 hax ，使用起来非常不方便和不稳定</br>
 
-hax只有IP6，并且woiden的IP4也被墙了，网页的ssh太难用，我的宽带不支持IP6，都是开着VPN连上woiden再通过woiden跳到hax，使用起来非常不方便和不稳定</br>
+于是想起 VPN 组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的工具是 `zerotier` ，并不需要公网 IP，组成 p2p 的虚拟局域网
 
-于是想起VPN组网，然后就有了IP4地址，也不需要再挂VPN可以直连，使用的工具是 `zerotier` ，并不需要公网IP，组成p2p的虚拟局域网
+参照官网文档教程只配置 hax 就行了，woiden 有点麻烦没必要折腾，如果是 linux 大佬请随意
 
-参照官网文档教程只配置hax就行了，woiden有点麻烦没必要折腾，如果是linux大佬请随意
+配合 `Squid` 工具，然后你就会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 VPN 了，嗯~嗯~~~~这...反转
 
 ---
