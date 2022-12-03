@@ -21,4 +21,7 @@ jobs:
           -e IBM_URL=${{ secrets.IBM_URL }} \
           -e HOST=${{ secrets.HOST }} \
           -e SECRET_ID=${{ secrets.SECRET_ID }} \
+          -e TENC_TOKEN=${{ secrets.TENC_TOKEN }}
+          -e TELE_ID=${{ secrets.TELE_ID }}
+          -e TELE_TOKEN=${{ secrets.TELE_TOKEN }}
           ghcr.io/zakkoree/woinden_extend:latest
