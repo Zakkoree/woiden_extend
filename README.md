@@ -20,6 +20,9 @@
 > `TELE_ID: Telegram ID`</br>
 > `TELE_TOKEN: 机器人Token`</br>
 
+<kbd>**可选参数**</kbd> pushplus 推送参数 ( 微信推送 )
+> `TENC_TOKEN: 你的Token`</br>
+
 <kbd>**可选参数**</kbd> 图片和V3验证支持 `2Captcha`  ( 使用 `Yes Captcha` [参考⤵](#002) )
 > `TWOCAPTCHA_TOKEN: 你的Token`</br>
 
