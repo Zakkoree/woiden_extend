@@ -151,7 +151,7 @@ docker run \
 ## 分享
 **woiden.id 和 hax.co.id 服务器使用小技巧**
  
-hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用，于是就想起了 VPN 组网，然后就有了 IP4 地址，也不需要再挂 VPN 可以直连，使用工具 `zerotier` 或者 `tailscale` 都可以( 推荐使用配置简单的 `tailscale` ，`zerotier` 可自定义配置服务器)，并不需要公网 IP，基于p2p打洞 🕳 技术组成的虚拟局域网，参照官网文档教程配置 hax 就行了，woiden 有点麻烦没必要折腾 ( nat 共享IP的端口被限制了，如果是 linux 大佬请随意) 以 hax 为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 或者直连 hax 跳转 woiden 方式使用，也适用其他被墙或无公网IP服务器 ( 理论上可行 )
+hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用，于是就想起了 VPN 组网，然后就有了 IP4 地址，也不需要再挂 VPN 可以直连，使用工具 `zerotier` 或者 `tailscale` 都可以( 推荐使用配置简单的 `tailscale` ，`zerotier` 可自定义配置服务器)，并不需要公网 IP，基于p2p打洞 🕳 技术组成的虚拟局域网，参照官网文档教程配置 hax 就行了，woiden 有点麻烦没必要折腾 ( nat 共享IP的端口被限制了，如果是 linux 大佬请随意) 以 hax 为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 使用，也适用其他被墙或无公网IP服务器 ( 理论上可行 )
 
 配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，带宽足够延迟一般，由于网络波动勉强支持4K 🎞，还可以开启BBR提速 📈，支持多操作系统包括手机端  </br>
 嗯~  反转了 :)  </br>
