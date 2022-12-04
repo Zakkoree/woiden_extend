@@ -159,6 +159,6 @@ hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用�
 嗯~  这反转 :) </br>
 本技巧也适用其他被墙或无公网IP服务器 ( 应该可行，我也没测试过几个，是基于p2p打洞 🕳 技术 )
 
-本项目为学习 `python` `linux` 等，如果有问题或更棒的工具技巧[请联系我🤝](https://github.com/Zakkoree)
+本项目为学习 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
 
 ---
