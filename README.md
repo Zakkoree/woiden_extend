@@ -153,7 +153,7 @@ docker run \
  
 hax 只有 IPv6，并且 woiden 的 IPv4 也被墙了，网页的 SSH 太难用，于是就想起了 VPN 组网，然后就有了 IP4 地址，也不需要再挂 VPN 可以直连，使用工具 `zerotier` 或者 `tailscale` 都可以( 推荐使用配置简单的 `tailscale` ，`zerotier` 可自定义配置服务器)，并不需要公网 IP，基于p2p打洞 🕳 技术组成的虚拟局域网，参照官网文档教程配置 hax 就行了，woiden 没必要折腾 (性能更好、网速更快，但系统内核不支持 tun 无法使用) 可以使用 hax 作为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 任意端口
 
-配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，带宽足够延迟一般，由于网络波动4K🎞有点吃力，还可以开启BBR提速 📈，支持多操作系统包括手机端  </br>
+配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，带宽足够延迟一般，由于网络波动4K🎞有点吃力，支持多操作系统包括手机端  </br>
 嗯~  反转了 :)  </br>
 
 本项目为学习 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
