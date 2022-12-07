@@ -166,6 +166,6 @@ YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/01-39-32-9388b2-b3c3db7e375a77db52631fcf56762198-fdsfsdfs.png)
 
 
-本项目为学习 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
+本项目为学习交流 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
 
 ---
