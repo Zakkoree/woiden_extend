@@ -160,15 +160,12 @@ kvm 架构的 hax 可玩性高点，woiden 的性能更好、网速更快，但�
 配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，网速足够延迟一般，YouTube 4K 🎞 流畅，支持多操作系统包括手机端  </br>
 还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )
 
-嗯~  反转了 :)  </br>
-组网虽然不是裸连但网速还行，cloudflare 可以实现裸连网速行不行不知道，国内号称减速云
-
-</br>
-
 YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/18-59-17-9fd569-d6d6720543e84f82ffba5908dfff553e-Snipaste_2022-12-07_18-43-53.png)
 
-</br>
+嗯~  反转了 :)  </br>
+组网虽然不是裸连但网速还行，cloudflare 可以实现裸连网速行不行不知道，国内号称减速云
+
 
 >  **Warning** 似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家IP</br>
 
