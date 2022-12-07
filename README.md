@@ -165,7 +165,7 @@ kvm 架构的 hax 可玩性高点，woiden 的性能更好、网速更快，但�
 YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/18-59-17-9fd569-d6d6720543e84f82ffba5908dfff553e-Snipaste_2022-12-07_18-43-53.png)
 
-注意：似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家的IP</br>
+>  **Warning** 似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家的IP</br>
 
 本项目为学习交流 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
 
