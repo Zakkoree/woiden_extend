@@ -155,15 +155,16 @@ docker run \
 
 使用工具 `zerotier` 或者 `tailscale` 都可以 (推荐使用配置简单的 `tailscale` ，`zerotier` 比较复杂可自定义配置服务器)，基于p2p打洞 🕳 技术组成的虚拟局域网，无需要公网 IP，参照官网文档教程配置 hax(kvm) 就行了( openvz 系统架构不支持无法使用 ，不知道 woiden 有没有 kvm 架构的 )，可以使用 hax 作为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 任意端口
 
-kvm 架构的 hax 可玩性高点，woiden 的性能更好、网速更快，但对于国内连接 hax 和 woiden 网速和延迟基本是一样的
-
 配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，网速足够延迟一般，YouTube 4K 🎞 流畅，支持多操作系统包括手机端  </br>
 还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )
 
 YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/18-59-17-9fd569-d6d6720543e84f82ffba5908dfff553e-Snipaste_2022-12-07_18-43-53.png)
 
-嗯~  反转了 :)  </br>
+嗯~  反转了 :)  
+
+
+kvm 架构的 hax 可玩性高点，woiden 的性能好点、网速更快，但对于国内连接 hax 和 woiden 网速和延迟不差上下</br>
 组网虽然不是裸连但网速还行，cloudflare 可以实现裸连网速行不行不知道，国内号称减速云
 
 
