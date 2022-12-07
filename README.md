@@ -157,7 +157,7 @@ docker run \
 
 kvm 架构的 hax 可玩性高点，woiden 的性能更好、网速更快，但对于国内连接 hax 和 woiden 网速和延迟基本是一样的
 
-配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，带宽足够延迟一般，由于网络波动4K🎞有点吃力，支持多操作系统包括手机端  </br>
+配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，带宽足够延迟一般，流畅4K🎞，支持多操作系统包括手机端  </br>
 还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )</br>
 
 嗯~  反转了 :)  </br>
@@ -165,6 +165,7 @@ kvm 架构的 hax 可玩性高点，woiden 的性能更好、网速更快，但�
 YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/01-39-32-9388b2-b3c3db7e375a77db52631fcf56762198-fdsfsdfs.png)
 
+注意：似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家的IP</br>
 
 本项目为学习交流 `python` `linux` 等，如有问题或更棒的工具技巧[欢迎联系我🤝](https://github.com/Zakkoree)
 
