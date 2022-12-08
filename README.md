@@ -153,7 +153,7 @@ docker run \
 
 宽带不支持无法连接IP6，并且它们的 IPv4 也被墙了，网页的 SSH 太难用，挂代理连接方式不方便也不稳定，于是想到了 VPN 组网，然后就有了 IP4 地址，也不需要再挂 VPN 可以直连
 
-使用工具 `zerotier` 或者 `tailscale` 都可以 (推荐使用配置简单的 `tailscale` ，`zerotier` 比较复杂可自定义配置服务器)，基于p2p打洞 🕳 技术组成的虚拟局域网，无需要公网 IP，参照官网文档教程配置 hax(KVM) 就行了( OpenVZ 系统架构无法使用 ，woiden 似乎没有 KVM 架构的 )，可以使用 hax 作为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 任意端口
+使用工具 `zerotier` 或者 `tailscale` 都可以 (推荐使用配置简单的 `tailscale` ，`zerotier` 比较复杂可自定义配置服务器)，基于p2p打洞 🕳 技术组成的虚拟局域网，无需要公网 IP，参照官网文档教程配置 hax(KVM) 就行了，OpenVZ 系统架构无法使用，woiden 似乎没有 KVM 架构的，可以使用 hax 作为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 任意端口
 
 配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，网速够用、延迟一般，YouTube 4K 🎞 流畅，支持多操作系统包括手机端  </br>
 还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )
