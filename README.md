@@ -163,7 +163,7 @@ YouTube 4K</br>
 
 嗯~  反转了 :)  
 
-kvm 架构的 hax 可玩性高点，woiden 的性能好点、网速更快，但对于国内连接 hax 和 woiden 网速和延迟不差上下</br>
+kvm 架构的 hax 可玩性高点，woiden 的性能好点、网速更快，但对于国内连接 hax 和 woiden 的网速和延迟不差上下</br>
 
 >  **Warning** 似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家IP</br>
 
