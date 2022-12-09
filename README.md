@@ -155,8 +155,8 @@ docker run \
 
 使用工具 `zerotier` 或者 `tailscale` 都可以 (推荐使用配置简单的 `tailscale` ，`zerotier` 比较复杂可自定义配置服务器)，基于p2p打洞 🕳 技术组成的虚拟局域网，无需要公网 IP，参照官网文档教程配置 hax(KVM) 就行了，OpenVZ 系统架构无法使用，woiden 似乎没有 KVM 架构的，可以使用 hax 作为跳板机启用 ssh 隧道 `ssh -f -N -g -L 2222:localhost:22 root@woiden_IPv6` 来连接 woiden 任意端口
 
-配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，网速够用、延迟一般，YouTube 4K 🎞 流畅，支持多操作系统包括手机端  </br>
-还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )
+~~配合 `Squid` 工具使用，你会发现原本需要挂 VPN 连接的 VPS 变成了一个免费的 “VPN”(代理服务器) 了 🌐，网速够用、延迟一般，YouTube 4K 🎞 流畅，支持多操作系统包括手机端  </br>
+还可以通过 ssh 隧道连接到 woiden 的代理端口，实现随意切换到两只小鸡所在国家的IP(  )~~
 
 YouTube 4K</br>
 ![YouTube 4K](https://cdn.jsdelivr.net/gh/Zakkoree/FileDrive@main/images/picgo/2022/12/07/18-59-17-9fd569-d6d6720543e84f82ffba5908dfff553e-Snipaste_2022-12-07_18-43-53.png)
@@ -165,7 +165,7 @@ YouTube 4K</br>
 
 
 > **Note** kvm 架构的 hax 可玩性高点，woiden 的性能好点、网速更快，但对于国内连接 hax 和 woiden 的网速和延迟不差上下</br>
-还可以使用 Cloudflare 代理转发流量 (V2Ray WebSocket + TLS + Nginx + CDN 或 V2Ray Http2 + TLS + Caddy +CDN) ，配置好 Cloudflare 自选 IP 节点后网速会提升很多，优点：网速好、是 VPN 不是代理服务、hax 和 woiden 都可以搭建(这里 hax 和 woiden 的网速就有区别了)，缺点：稳定性没有组网好
+~~还可以使用 Cloudflare 代理转发流量 (V2Ray WebSocket + TLS + Nginx + CDN 或 V2Ray Http2 + TLS + Caddy +CDN) ，配置好 Cloudflare 自选 IP 节点后网速会提升很多，优点：网速好、是 VPN 不是代理服务、hax 和 woiden 都可以搭建(这里 hax 和 woiden 的网速就有区别了)，缺点：稳定性没有组网好~~
 
 >  **Warning** 似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家IP</br>
 
