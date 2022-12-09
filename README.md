@@ -165,7 +165,7 @@ YouTube 4K</br>
 
 
 > **Note** kvm 架构的 hax 可玩性高点，woiden 的性能好点、网速更快，但对于国内连接 hax 和 woiden 的网速和延迟不差上下</br>
-~~还可以使用 Cloudflare 代理转发流量搭建 VPN ( V2Ray WebSocket + TLS + Nginx + CDN 或者 V2Ray Http2 + TLS + Caddy +CDN ) ，配置 Cloudflare 自选 IP 节点后网速会有所提升，hax 和 woiden 都可以搭建( 这里 hax 和 woiden 的网速就有区别了 )，稳定性没有组网好~~
+~~还可以使用 Cloudflare 代理转发流量搭建 VPN ( V2Ray WebSocket + TLS + Nginx + CDN 或者 V2Ray Http2 + TLS + Caddy +CDN ) ，配置 Cloudflare 自选 IP 节点后网速会有所提升，hax 和 woiden 都可以搭建( 这里 hax 和 woiden 的网速就有区别了 )，配置繁琐且稳定性没有组网好~~
 
 >  **Warning** 似乎个别的小鸡存在IP封锁无法访问 CA CN NL KR SG 等一些国家IP</br>
 
