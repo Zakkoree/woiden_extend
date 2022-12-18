@@ -150,8 +150,8 @@ def run(page):
         logger.error("renew fail")
         if GITHUB:
             try:
-                update=open('renewTime', 'w')
-                lastTime = update.read()
+                f=open('renewTime', 'r',encoding='utf-8')
+                lastTime = f.read()
             # barkPush('[ERROR] renew fail')
                 teleinfomsg = '''Renew Fail ‼
         {0}
