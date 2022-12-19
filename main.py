@@ -154,9 +154,9 @@ def run(page):
                 lastTime = f.read()
             # barkPush('[ERROR] renew fail')
                 teleinfomsg = '''Renew Fail ‼
-        {0}
-        Last Renew Time {1}
-        '''.format(message, lastTime)
+        Please try again or wait for the next automatic execution
+        Last Renew Time {0}
+        '''.format(lastTime)
                 send(teleinfomsg)
                 f.close()
             except Exception as e:
@@ -164,8 +164,8 @@ def run(page):
             
         else:
             teleinfomsg = '''Renew Fail ‼
-        {0}
-        '''.format(message)
+        Please try again or wait for the next automatic execution
+        '''
             send(teleinfomsg)
             
 def adsClear(page):
