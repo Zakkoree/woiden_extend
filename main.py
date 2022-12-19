@@ -82,7 +82,7 @@ def send(txt):
         body=json.dumps(data).encode(encoding='utf-8')
         headers = {'Content-Type':'application/json'}
         requests.post(url,data=body,headers=headers)
-        logger.info("Telebot push")
+        logger.info("Tencent push")
     except Exception as e:
         logger.error(e)
 
@@ -158,7 +158,7 @@ def run(page):
         Last Renew Time {1}
         '''.format(message, lastTime)
                 send(teleinfomsg)
-                update.close()
+                f.close()
             except Exception as e:
                 logger.error(e)
             
