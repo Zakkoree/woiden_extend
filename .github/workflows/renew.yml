@@ -3,7 +3,7 @@ name: 续订
 on: 
   workflow_dispatch:
   schedule:
-    - cron: "0 0,8,16 * * *"
+    - cron: "0 0,7,17 * * *"
 env:
   USERNAME: ${{ secrets.USERNAME }}
   PASSWORD: ${{ secrets.PASSWORD }}
