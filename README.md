@@ -1,5 +1,5 @@
 
-# Woiden And Hax Auto Extend <sup>💯</sup>  <img align="right" src="https://img.shields.io/badge/2022.12.26-activity-success"/>
+# Woiden And Hax Auto Extend <sup>💯</sup>  <img align="right" src="https://img.shields.io/badge/2022.12.27-activity-success"/>
 
 **woiden.id 和 hax.co.id 自动续订**    
 
